@@ -38,7 +38,7 @@ const Home: NextPage = () => {
     link: 'honors',
     title: 'Honors & Academics',
     icon: IoStarOutline,
-  }]
+  } ]
 
   const scrollIntoView = (id: string) => {
     const element = document.getElementById(id)
