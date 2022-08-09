@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, HStack,Button, Icon, VStack, Text, Spacer, Show, Hide } from '@chakra-ui/react'
-import {IoSchoolOutline, IoGridOutline, IoMenuOutline, IoList , IoStarOutline, IoBriefcaseOutline, IoPersonOutline, IoMenu} from 'react-icons/io5'
+import {IoSchoolOutline, IoGridOutline, IoMenuOutline, IoBasketballOutline,  IoList , IoStarOutline, IoBriefcaseOutline, IoPersonOutline, IoMenu} from 'react-icons/io5'
 import type { NextPage } from 'next'
 import { useState } from 'react'
 import Head from 'next/head'
@@ -8,6 +8,8 @@ import styles from '../styles/Home.module.css'
 import About from '../components/About'
 import Experience from '../components/Experience'
 import Activities from '../components/Activities'
+import Honors from '../components/Honors'
+import Hobbies from '../components/Hobbies'
 
 
 const Home: NextPage = () => {
@@ -38,7 +40,13 @@ const Home: NextPage = () => {
     link: 'honors',
     title: 'Honors & Academics',
     icon: IoStarOutline,
-  } ]
+  }, 
+
+  {
+    link: 'hobbies',
+    title: 'Hobbies',
+    icon: IoBasketballOutline,
+  }]
 
   const scrollIntoView = (id: string) => {
     const element = document.getElementById(id)
@@ -102,7 +110,14 @@ const Home: NextPage = () => {
         <Box id='academic'>
           <Activities></Activities>
         </Box>
+
+        <Box id='honors'>
+              <Honors></Honors>
+        </Box>
              
+        <Box id='hobbies'>
+            <Hobbies></Hobbies>
+        </Box>
       </Flex>
     </Flex>
   )
