@@ -93,7 +93,6 @@ export default function Activities() {
                 </Box>
             ))}
             </SimpleGrid>
-            
         </Box>
       )
 }
