@@ -1,5 +1,6 @@
 .image {
     transition: all .2s ease-in-out;
+    margin-right: '10px';
 }
 
 .image:hover {

@@ -90,25 +90,23 @@ function Project(props: { name: string; year: string; description: Array<String>
             ))
         }
         </UnorderedList>
-        <HStack spacing={3} w='full' overflowX='scroll' overflowY={'visible'} h={'80px'}>
+        <HStack spacing={3} w='100%' overflowX='scroll' overflowY={'visible'} h={'80px'}>
         {
             images.map((imageUrl: any) => (
-                <Image borderRadius={'10px'} key={imageUrl} src={imageUrl} h='70px' alt='project image' className='image' onClick={(e) => {handleImageClick(e)}}></Image>
+                <Image style={{borderRadius: '10px'}} key={imageUrl} src={imageUrl} width='70px' height={'70px'} objectFit='initial' alt='project image' className='image' onClick={(e) => {handleImageClick(e)}}></Image>
             ))
         }
         </HStack>
         </Stack>
+        
+
         <Modal isOpen={isOpen} onClose={onClose} allowPinchZoom={true}>
         <ModalOverlay />
         <ModalContent borderRadius={'10px'}>
-        
-        <Image src={image.src} alt='project image' h='auto' borderRadius={'inherit'}></Image>
-        {image.desc ? <Text p={5}>{image.desc}</Text>: null}
-      
-            
-          
-        
+        <Image src={image.src} alt='project image' style={{borderRadius: 'inherit'}} objectFit='contain'></Image>
+        <Text p={5}>{image.desc}</Text>
         </ModalContent>
+       
       </Modal>
       </Box>
       

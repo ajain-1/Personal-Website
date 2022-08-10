@@ -62,10 +62,10 @@
                 "Used data augmentation to increase training data"
             ],
             "images": [
-                "/projects/ai/Outputs.png",
-                "/projects/ai/Final.png",
-                "/projects/ai/DataSplit.png",
-                "/projects/ai/DataAug.png"
+                "/projects/AI/Outputs.png",
+                "/projects/AI/Final.png",
+                "/projects/AI/DataSplit.png",
+                "/projects/AI/DataAug.png"
                 
             ], 
             "imageDescriptions": [
