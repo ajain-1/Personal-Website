@@ -50,7 +50,14 @@ export default function Projects() {
                 ))}
             </SimpleGrid>
         <Text fontSize={'lg'} pt={5} mb={4} fontWeight={500}>Software Development</Text>
-        <Text fontSize={'lg'} pt={5} mb={4} fontWeight={500}>Cloud Development</Text>
+        <SimpleGrid columns={[1, 1, 2]} spacing={4}>
+                {projects.software.map(({ name, year, description, images, imageDescriptions }) => (
+                    <Box key={name} h='100%'>
+                        <Project name={name} year={year} description={description} images={images} idesc={imageDescriptions}></Project>
+                    </Box>
+                ))}
+            </SimpleGrid>
+        <Text fontSize={'lg'} pt={5} mb={4} fontWeight={500}>Cloud Development and More</Text>
    </Box>
   )
 }
@@ -83,7 +90,7 @@ function Project(props: { name: string; year: string; description: Array<String>
           <Stack direction={'row'} spacing={0}>
             <Text fontWeight={600} fontSize='lg'>{name}</Text>
             <Spacer />
-            <Badge variant={'solid'} maxH='20px'>{year}</Badge>
+            {year ? <Badge variant={'solid'} maxH='20px'>{year}</Badge>: null}
             {/* <Text bgColor={'gray.900'} textColor='white' borderRadius='10px' px='2' py={1}>{year}</Text> */}
           </Stack>
         <UnorderedList px={3}>
@@ -94,7 +101,7 @@ function Project(props: { name: string; year: string; description: Array<String>
             ))
         }
         </UnorderedList>
-        <Flex w="inherit" flexDirection={'row'} overflowX='scroll' overflowY={'scroll'} h={'70px'} >
+        {images.length > 1 ? <Flex w="inherit" flexDirection={'row'} overflowX='scroll' overflowY={'scroll'} h={'70px'} >
         {
             images.map((imageUrl: any) => (
                 <Flex key={imageUrl} mr={3} minW='70px'>
@@ -102,9 +109,9 @@ function Project(props: { name: string; year: string; description: Array<String>
                 </Flex>       
             ))
         }
-        </Flex>
+        </Flex>: null}
         </Stack>
-        <Modal isOpen={isOpen} onClose={onClose} allowPinchZoom={true} size='2xl' isCentered={true}>
+        <Modal isOpen={isOpen} onClose={onClose} allowPinchZoom={true} size='2xl' isCentered={true} motionPreset='slideInBottom'>
         <ModalOverlay />
         <ModalContent borderRadius={'10px'} bgClip={'content-box'}>
             <Box pt={5}>

@@ -1,29 +1,6 @@
 {
     "robotics" : [
-        {
-            "name": "VEX Robotics - Tower Takeover",
-            "year": "2019",
-            "description" : [
-                "Robot used a double reverse 4 bar system to achieve a height of 7ft",
-                "Helped design, build, and program the robot as team captain",
-                "Featured in local newspaper and presented to City of Calabasas",
-                "Programmed for autonomous path planning and control using C++"
-            ],
-            "images": [
-                "/projects/Robotics/MayorRobot.png",
-                "/projects/Robotics/RobotScore.png",
-                "/projects/Robotics/RobotMatch.JPG",
-                "/projects/Robotics/TowerRobot.png",
-                "/projects/Robotics/RobotCode.png"
-            ], 
-            "imageDescriptions": [
-                "",
-                "One of our early season tournament wins at Ventura County Office of Education",
-                "An impressive stack of cubes that our robot managed to put up and win us a match",
-                "",
-                "Snippet of the robot code (using the PROSV5 API from Purdue University)"
-            ]
-        }, 
+         
         {
             "name": "VEX Robotics - Tipping Point",
             "year": "2021",
@@ -48,6 +25,30 @@
                 "Qualified for Worlds by winning as State Finalists in at the San Diego VEX Robotics State Championship",
                 "The robot has enough traction and power to balance itself (weighs around 20lbs) and around 15lbs of weighted goal posts onto the platform.",
                 "Event at VEX Worlds Championship in Dallas, TX"
+            ]
+        },
+        {
+            "name": "VEX Robotics - Tower Takeover",
+            "year": "2019",
+            "description" : [
+                "Robot used a double reverse 4 bar system to achieve a height of 7ft",
+                "Helped design, build, and program the robot as team captain",
+                "Featured in local newspaper and presented to City of Calabasas",
+                "Programmed for autonomous path planning and control using C++"
+            ],
+            "images": [
+                "/projects/Robotics/MayorRobot.png",
+                "/projects/Robotics/RobotScore.png",
+                "/projects/Robotics/RobotMatch.JPG",
+                "/projects/Robotics/TowerRobot.png",
+                "/projects/Robotics/RobotCode.png"
+            ], 
+            "imageDescriptions": [
+                "",
+                "One of our early season tournament wins at Ventura County Office of Education",
+                "An impressive stack of cubes that our robot managed to put up and win us a match",
+                "The robot (creatively nicknamed 'Cube Bot') ",
+                "Snippet of the robot code (using the PROSV5 API from Purdue University)"
             ]
         }
     ],
@@ -77,6 +78,32 @@
             ]
         },
         {
+            "name": "Object Detection and Bounding (CNN)", 
+            "year": "2021",
+            "description" : [
+                "Created an AI model to detect common road objects in a given scene",
+                "Could be applied in autonomous driving and other areas",
+                "Presented research project to students and graduates in Inspirit AI",
+                "Used 3 CNN approaches: Perceptron, Sliding Windows, and YOLO"
+            ],
+            "images": [
+                "/projects/AI/CoverSlide.png",
+                "/projects/AI/SlidingWindows.png",
+                "/projects/AI/CNNSliding.png",
+                "/projects/AI/VGGNN.png",
+                "/projects/AI/YOLO.png",
+                "/projects/AI/YOLOResult.png"    
+            ], 
+            "imageDescriptions": [
+                "We presented to over a hundred students in Inspirit AI. Others had interesting projects they chose to research such as in sentiment analysis, fake news detection, and justice.",
+                "Our second approach (after using a Perceptron) was to use sliding windows to run our model on smaller parts of an image in hopes of increasing accuracy.",
+                "Initially, a basic CNN model inputted with individual windows produced just an 82 percent accuracy, so we decided to change our approach.",            
+                "We used an image classification model called VGG NN to better classify objects and achieved a 95% accuracy.",  
+                "Finally, we also tried the 'You Only Look Once' model, which is a model that uses a DarkNet model to detect objects in an image by splitting the image into cells rather than using sliding windows.",
+                "The YOLO approach produces a confidence level for each object it detects. This is a sample image we ran through the model."  
+            ]
+        },
+        {
             "name": "Tumor Classification (Regression)",
             "year": "2021",
             "description" : [
@@ -97,9 +124,47 @@
                 "The features we used to train our model",
                 "Regression model that used a single feature (radius measurement). Using one feature alone doesn't produce great accuracy (around 90%), so we moved to multi-feature regression and saw an improvement of 3% on the validation set (still lots of room for improvement)"            
             ]
+        },
+        {
+            "name": "Other AI Projects",
+            "year": "",
+            "description" : [
+                "Made an reinforcement learning model to play blackjack against. Used an Epsilon-Greedy learning approach.",
+                "Project to align 3d models to Scan with Bayesian Optimization (NDA)",
+                "Many smaller labs and projects at Inspirit AI and AI4ALL @ CMU"
+            ],
+            "images": [""],
+            "imageDescriptions": [""]
+            
         }
         
+        
     ], 
-    "software": [],
+    "software": [
+        {
+            "name": "Hirezz (Mobile App)",
+            "year": "2020",
+            "description" : [
+                "Developed MVP for company I cofounded, Hirezz",
+                "Designed with Figma and developed with Flutter and Firebase", 
+                "A social networking app to discover and hire home contractors",
+                "Idea --> Product"
+            ],
+            "images": [
+                "/projects/AI/Outputs.png",
+                "/projects/AI/Final.png",
+                "/projects/AI/DataSplit.png",
+                "/projects/AI/DataAug.png"
+                
+            ], 
+            "imageDescriptions": [
+                "Ouput images from classification model",
+                "Final accuracy on validation data: 0.931",
+                "Split of training and testing data (I know, 40% for validation is a lot)",
+                "Some simple methods we used to increase our available data."
+                
+            ]
+        }
+    ],
     "cloud": []
 }
