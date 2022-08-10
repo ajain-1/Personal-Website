@@ -17,18 +17,7 @@ import {
 
 export default function Experience() {
 const experiences = [
-    {
-        title: 'Systems Engineer',
-        company: 'United Talent Agency',
-        date: '2022',
-        description: 
-        ['Developed creative solutions to addressing critical cybersecurity threats', 
-        'Maintained Github, Docker, and Azure workflows', 
-        'Learnt from DevOps and Cybersecurity industry experts',
-        'Gained exposure to the talent management and recruiting industry', 
-        ],
-        imageUrl: '/UTA.png',
-    }, 
+
     {
         title: 'Software Developer',
         company: 'Machina Labs',
@@ -41,6 +30,18 @@ const experiences = [
         ],
         imageUrl: '/MachinaLabs.jpeg'
     }, 
+    {
+      title: 'Systems Engineer',
+      company: 'United Talent Agency',
+      date: '2022',
+      description: 
+      ['Developed creative solutions to addressing critical cybersecurity threats', 
+      'Maintained Github, Docker, and Azure workflows', 
+      'Learnt from DevOps and Cybersecurity industry experts',
+      'Gained exposure to the talent management and recruiting industry', 
+      ],
+      imageUrl: '/UTA.png',
+  }, 
     {
         title: 'CAD Engineer',
         company: 'Martin Bros',

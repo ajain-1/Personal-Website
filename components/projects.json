@@ -1,0 +1,82 @@
+{
+    "robotics" : [
+        {
+            "name": "VEX Robotics - Tower Takeover",
+            "year": "2019",
+            "description" : [
+                "Robot used a double reverse 4 bar system to achieve a height of 7ft",
+                "Helped design, build, and program the robot as team captain",
+                "Featured in local newspaper and presented to City of Calabasas",
+                "Programmed for autonomous path planning and control using C++"
+            ],
+            "images": [
+                "/projects/Robotics/MayorRobot.png",
+                "/projects/Robotics/RobotScore.png",
+                "/projects/Robotics/RobotMatch.JPG",
+                "/projects/Robotics/TowerRobot.png",
+                "/projects/Robotics/RobotCode.png"
+            ], 
+            "imageDescriptions": [
+                "",
+                "One of our early season tournament wins at Ventura County Office of Education",
+                "An impressive stack of cubes that our robot managed to put up and win us a match",
+                "",
+                "Snippet of the robot code (using the PROSV5 API from Purdue University)"
+            ]
+        }, 
+        {
+            "name": "VEX Robotics - Tipping Point",
+            "year": "2021",
+            "description" : [
+                "Designed, built, and programmed three robots throughout the year",
+                "Led team to VEX State and World Championships as captain",
+                "Applied core robot design principles and programming techniques",
+                "Trained the robot for autonomous movement using sensor inputs"
+            ],
+            "images": [
+                "/projects/Robotics/IMG_8869.HEIC",
+                "/projects/Robotics/IMG_8866.HEIC",
+                "/projects/Robotics/IMG_8862.HEIC",
+                "/projects/Robotics/IMG_8813.HEIC",
+                "/projects/Robotics/IMG_8816.HEIC",
+                "/projects/Robotics/IMG_8893.HEIC"
+            ], 
+            "imageDescriptions": [
+                "I designed, built, and programmed this robot during spring of 2022 (this was the final iteration)",
+                "I added systems like pneumatic pistons (at about 100psi) and 8 DC Motors to perform tasks. Also uses inertial sensors and other sensors (added after this picture) like optical sensors, distance sensors, and GPS sensors to navigate the field. ",
+                "Operates on a 6 motor drivebase and reaches speeds of 280rpm on 4 inch wheels. Uses center traction wheels to climb up platforms and omni wheels to increase manueverability.",
+                "Qualified for Worlds by winning as State Finalists in at the San Diego VEX Robotics State Championship",
+                "The robot has enough traction and power to balance itself (weighs around 20lbs) and around 15lbs of weighted goal posts onto the platform.",
+                "Event at VEX Worlds Championship in Dallas, TX"
+            ]
+        }
+    ],
+    "ai": [
+        {
+            "name": "Plant Disease Detection and Classification",
+            "year": "2021",
+            "description" : [
+                "Built a computer vision model using ResNet architecture",
+                "Can identify and categorize plant disease with high accuracy",
+                "Presented findings at Carnegie Mellon's AI4ALL Research Program",
+                "Used data augmentation to increase training data"
+            ],
+            "images": [
+                "/projects/ai/Outputs.png",
+                "/projects/ai/Final.png",
+                "/projects/ai/DataSplit.png",
+                "/projects/ai/DataAug.png"
+                
+            ], 
+            "imageDescriptions": [
+                "Ouput images from classification model",
+                "Final accuracy on validation data: 0.931",
+                "Split of training and testing data (I know, 40% for validation is a lot)",
+                "Some simple methods we used to increase our available data."
+                
+            ]
+        }
+    ], 
+    "software": [],
+    "cloud": []
+}

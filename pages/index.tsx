@@ -5,11 +5,13 @@ import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+
 import About from '../components/About'
 import Experience from '../components/Experience'
 import Activities from '../components/Activities'
 import Honors from '../components/Honors'
 import Hobbies from '../components/Hobbies'
+import Projects from '../components/Projects'
 
 
 const Home: NextPage = () => {
@@ -53,6 +55,7 @@ const Home: NextPage = () => {
     if (element) {
       element.scrollIntoView({behavior: 'smooth'})
     }
+    element?.addEventListener('scroll', () => {})
   }
 
   return (
@@ -76,14 +79,15 @@ const Home: NextPage = () => {
       </Flex>
       </Hide>
       <Flex flex={1} h='100vh' bgColor='F1ECCE' flexDir={'column'} overflow='scroll'>
-      <Show below='md'>
-      <Box w='full' h='50px' pl={5}>
-        <Icon as={IoMenuOutline} boxSize={'3em'} onClick={() => {
+      <Show below='md' >
+      <Flex w='full' h='50px' position='sticky' top={0} zIndex={1}>
+        <Spacer/>
+        <Icon as={IoMenuOutline} boxSize={'2.5em'} onClick={() => {
           setMenu(!menu);
           
         }}></Icon>
-
-        {menu ? <Flex w={'70vw'} zIndex={1} position='absolute' top={0} left={0} flexDir='column' h='100vh' bgColor={'#1b2432'} p="5" pt={8} color={'white'}>
+      
+        {menu ? <Flex w={'70vw'}  position='absolute' top={0} left={0} flexDir='column' h='100vh' bgColor={'#1b2432'} p="5" pt={8} color={'white'}>
           {/* <Heading fontSize={'3xl'} ml={4} mb="7" fontWeight={'900'}>Aryan Jain</Heading> */}
           <VStack spacing={3}>
             {links.map(({ link, title, icon }) => (
@@ -98,7 +102,7 @@ const Home: NextPage = () => {
             <Button bgColor={'white'} color='black' w='100%' _hover={{bgColor: 'gray.600', color:'white'}}>Contact</Button>
           </a>
       </Flex> : null}
-      </Box>
+      </Flex>
       </Show>
         <Box id='about'>
           <About/>
@@ -109,6 +113,10 @@ const Home: NextPage = () => {
 
         <Box id='academic'>
           <Activities></Activities>
+        </Box>
+
+        <Box id='projects'>
+          <Projects></Projects>
         </Box>
 
         <Box id='honors'>
