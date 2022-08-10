@@ -21,9 +21,12 @@ import { Box,
     List,
     UnorderedList, 
     HStack,
+    chakra, 
     Spacer} from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import projects from './projects.json'
+import IMG from 'next/image'
+import { ChakraNextImage } from './ChakraImg'
 
 export default function Projects() {
 
@@ -61,7 +64,8 @@ function Project(props: { name: string; year: string; description: Array<String>
     })
 
     function handleImageClick(e: React.MouseEvent) {
-        let path : string = e.currentTarget.getAttribute('src') || ''
+        
+        let path : string = e.currentTarget.getAttribute('alt') || ''
         setimage({src: path, desc: idesc[images.indexOf(path)]})
         onOpen()
     }
@@ -90,24 +94,30 @@ function Project(props: { name: string; year: string; description: Array<String>
             ))
         }
         </UnorderedList>
-        <HStack spacing={3} w='100%' overflowX='scroll' overflowY={'visible'} h={'80px'}>
+        <Flex w="inherit" flexDirection={'row'} overflowX='scroll' overflowY={'scroll'} h={'70px'} >
         {
             images.map((imageUrl: any) => (
-                <Image style={{borderRadius: '10px'}} key={imageUrl} src={imageUrl} width='70px' height={'70px'} objectFit='initial' alt='project image' className='image' onClick={(e) => {handleImageClick(e)}}></Image>
+                <Flex key={imageUrl} mr={3} minW='70px'>
+                    <IMG src={imageUrl} style={{borderRadius: '25px'}} width='70px' height='70px' alt={imageUrl} className='image' onClick={(e) => {handleImageClick(e)}}></IMG>
+                </Flex>       
             ))
         }
-        </HStack>
+        </Flex>
         </Stack>
-        
-
-        <Modal isOpen={isOpen} onClose={onClose} allowPinchZoom={true}>
+        <Modal isOpen={isOpen} onClose={onClose} allowPinchZoom={true} size='2xl' isCentered={true}>
         <ModalOverlay />
-        <ModalContent borderRadius={'10px'}>
-        <Image src={image.src} alt='project image' style={{borderRadius: 'inherit'}} objectFit='contain'></Image>
-        <Text p={5}>{image.desc}</Text>
+        <ModalContent borderRadius={'10px'} bgClip={'content-box'}>
+            <Box pt={5}>
+            {/* <IMG quality={50} src={image.src} alt='project image' width='1000px' height='500px' priority objectFit='contain'></IMG>
+             */}
+            <ChakraNextImage src={image.src} alt='project image' width={'700px'} objectFit='contain' height='500px'></ChakraNextImage>
+            <Text p={5}>{image.desc}</Text>
+            </Box>
+
+            
         </ModalContent>
-       
-      </Modal>
+        
+        </Modal>
       </Box>
       
     )

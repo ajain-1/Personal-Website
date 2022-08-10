@@ -12,7 +12,7 @@ import {
   export default function About() {
     return (
       <Stack direction={{ base: 'column', md: 'row' }} bgColor='gray.100' h={[null, null, "50vh"]}>
-        <Flex p={8} align={'center'} justify={'center'}>
+        <Flex p={8} align={'center'} justify={'center'} flex={1} justifyContent='start' minW={'50vw'}>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
             <Heading fontSize={{ base: '4xl', md: '4xl', lg: '5xl' }}>
               <Text
@@ -54,7 +54,7 @@ import {
           </Stack>
         </Flex>
         <Flex p='12'>
-        <Image src='/IMG_9066.jpg' alt='profile' borderRadius='20px' boxShadow={'dark-lg'} w='full' h='full'></Image>
+        <Image src='/IMG_9066.jpg' alt='profile' borderRadius='20px' boxShadow={'dark-lg'} objectFit="contain" h='full'></Image>
         </Flex>
       </Stack>
 

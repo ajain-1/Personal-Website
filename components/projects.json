@@ -44,7 +44,7 @@
             "imageDescriptions": [
                 "I designed, built, and programmed this robot during spring of 2022 (this was the final iteration)",
                 "I added systems like pneumatic pistons (at about 100psi) and 8 DC Motors to perform tasks. Also uses inertial sensors and other sensors (added after this picture) like optical sensors, distance sensors, and GPS sensors to navigate the field. ",
-                "Operates on a 6 motor drivebase and reaches speeds of 280rpm on 4 inch wheels. Uses center traction wheels to climb up platforms and omni wheels to increase manueverability.",
+                "Operates on a 6 motor drivebase and reaches speeds of 280rpm on 4 inch wheels. Uses center traction wheels to climb up platforms and omnidirectional wheels to increase manueverability.",
                 "Qualified for Worlds by winning as State Finalists in at the San Diego VEX Robotics State Championship",
                 "The robot has enough traction and power to balance itself (weighs around 20lbs) and around 15lbs of weighted goal posts onto the platform.",
                 "Event at VEX Worlds Championship in Dallas, TX"
@@ -75,7 +75,30 @@
                 "Some simple methods we used to increase our available data."
                 
             ]
+        },
+        {
+            "name": "Tumor Classification (Regression)",
+            "year": "2021",
+            "description" : [
+                "Made an AI model to classify breast tumors as benign or malignant",
+                "Uses features such as tumor radius, surface area, and shape",
+                "Implemented a model that used multivariable regression",
+                "Used public dataset from health agencies with biopsies"
+            ],
+            "images": [
+                "/projects/AI/TClass.png",
+                "/projects/AI/Features.png",
+                "/projects/AI/SingleFeature.png"
+            
+                
+            ], 
+            "imageDescriptions": [
+                "Visual difference between benign and malignant tumors",
+                "The features we used to train our model",
+                "Regression model that used a single feature (radius measurement). Using one feature alone doesn't produce great accuracy (around 90%), so we moved to multi-feature regression and saw an improvement of 3% on the validation set (still lots of room for improvement)"            
+            ]
         }
+        
     ], 
     "software": [],
     "cloud": []
