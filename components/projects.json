@@ -19,12 +19,12 @@
                 "/projects/Robotics/IMG_8893.HEIC"
             ], 
             "imageDescriptions": [
-                "I designed, built, and programmed this robot during spring of 2022 (this was the final iteration)",
+                "I designed, built, and programmed this robot during spring of 2022 (this was the final iteration).",
                 "I added systems like pneumatic pistons (at about 100psi) and 8 DC Motors to perform tasks. Also uses inertial sensors and other sensors (added after this picture) like optical sensors, distance sensors, and GPS sensors to navigate the field. ",
                 "Operates on a 6 motor drivebase and reaches speeds of 280rpm on 4 inch wheels. Uses center traction wheels to climb up platforms and omnidirectional wheels to increase manueverability.",
-                "Qualified for Worlds by winning as State Finalists in at the San Diego VEX Robotics State Championship",
+                "Qualified for Worlds by winning as State Finalists in at the San Diego VEX Robotics State Championship.",
                 "The robot has enough traction and power to balance itself (weighs around 20lbs) and around 15lbs of weighted goal posts onto the platform.",
-                "Event at VEX Worlds Championship in Dallas, TX"
+                "Event at VEX Worlds Championship in Dallas, TX."
             ]
         },
         {
@@ -45,10 +45,10 @@
             ], 
             "imageDescriptions": [
                 "",
-                "One of our early season tournament wins at Ventura County Office of Education",
-                "An impressive stack of cubes that our robot managed to put up and win us a match",
-                "The robot (creatively nicknamed 'Cube Bot') ",
-                "Snippet of the robot code (using the PROSV5 API from Purdue University)"
+                "One of our early season tournament wins at Ventura County Office of Education.",
+                "An impressive stack of cubes that our robot managed to put up and win us a match.",
+                "The robot (creatively nicknamed 'Cube Bot').",
+                "Snippet of the robot code (using the PROSV5 API from Purdue University)."
             ]
         }
     ],
@@ -71,8 +71,8 @@
             ], 
             "imageDescriptions": [
                 "Ouput images from classification model",
-                "Final accuracy on validation data: 0.931",
-                "Split of training and testing data (I know, 40% for validation is a lot)",
+                "Final accuracy on validation data: 0.931.",
+                "Split of training and testing data.",
                 "Some simple methods we used to increase our available data."
                 
             ]
@@ -120,9 +120,9 @@
                 
             ], 
             "imageDescriptions": [
-                "Visual difference between benign and malignant tumors",
-                "The features we used to train our model",
-                "Regression model that used a single feature (radius measurement). Using one feature alone doesn't produce great accuracy (around 90%), so we moved to multi-feature regression and saw an improvement of 3% on the validation set (still lots of room for improvement)"            
+                "Visual difference between benign and malignant tumors.",
+                "The features we used to train our model.",
+                "Regression model that used a single feature (radius measurement). Using one feature alone doesn't produce great accuracy (around 90%), so we moved to multi-feature regression and saw an improvement of 3% on the validation set (still lots of room for improvement)."            
             ]
         },
         {
@@ -130,7 +130,7 @@
             "year": "",
             "description" : [
                 "Made an reinforcement learning model to play blackjack against. Used an Epsilon-Greedy learning approach.",
-                "Project to align 3d models to Scan with Bayesian Optimization (NDA)",
+                "Project to align 3d models to Scan with Bayesian Optimization at Machina Labs (NDA)",
                 "Many smaller labs and projects at Inspirit AI and AI4ALL @ CMU"
             ],
             "images": [""],
@@ -148,23 +148,77 @@
                 "Developed MVP for company I cofounded, Hirezz",
                 "Designed with Figma and developed with Flutter and Firebase", 
                 "A social networking app to discover and hire home contractors",
-                "Idea --> Product"
+                "Learned how to make an idea into a product"
             ],
             "images": [
-                "/projects/AI/Outputs.png",
-                "/projects/AI/Final.png",
-                "/projects/AI/DataSplit.png",
-                "/projects/AI/DataAug.png"
+                "/projects/Software/Chat.png",
+                "/projects/Software/Home.png",
+                "/projects/Software/Search.png",
+                "/projects/Software/Logo.png"
                 
             ], 
             "imageDescriptions": [
-                "Ouput images from classification model",
-                "Final accuracy on validation data: 0.931",
-                "Split of training and testing data (I know, 40% for validation is a lot)",
-                "Some simple methods we used to increase our available data."
-                
+                "Some of the code (using Flutter) for the chat screen alongside the app running on an IOS emulator.",
+                "The home screen of the app I designed and developed.",
+                "Search screen (we used Algolia search)."
             ]
+           
+        },
+        {
+            "name": "Allay Tax (Website)",
+            "year": "2020",
+            "description" : [
+                "Designed and developed website for tax resolution firm (allaytax.com)",
+                "Optimized website for search engines, performance in key metrics, and UX", 
+                "Resulted in a 2x faster website by using a CDN and caching",
+                "Implemented a CMS for the website to allow for easy updates"
+            ],
+            "images": [
+                "/AllayTax.png",
+                "/projects/Software/AllayHome.png",
+                "/projects/Software/AllayBlog.png",
+                "/projects/Software/About.png"
+                
+                
+            ], 
+            "imageDescriptions": [
+                "Home page of the website. The focus was on improving user conversion rate, so the contact form was a central part of the page.",
+                "A CMS was implemented so that blog posts about tax issues can easily be written and updated.",
+                "Some info about the company and the services they provide."
+            ],
+            "links" : [
+                "https://www.allaytax.com","", "", ""
+            ]
+        },
+        {
+            "name": "Machina Labs (Toolset)",
+            "year": "2022",
+            "description" : [
+                "Architected and developed cloud-based internal toolset for Machina Labs",
+                "Machina Labs is innovating with robotic incremental forming",
+                "Brought computational design and robot path planning scripts to the cloud",
+                "Enabled generating robot paths and editing complex geometries in the web"
+            
+            ],
+            "images": ["/projects/Software/MachinaLabs.png", "/projects/Software/MachinaLogo.jpeg", "/projects/Software/GIF.png"],
+            "imageDescriptions": ["Incremental Robotic Forming at Machina Labs at work!"],
+            "links": ["", "https://www.machinalabs.ai", "https://dot.la/media-library/machina-labs-robots-molding-3d-metals.gif?id=29222911&width=980"]
         }
     ],
-    "cloud": []
+    "cloud": [
+        {
+            "name": "FireFinder",
+            "year": "2019",
+            "description" : [
+                "Created a smart fire detection system connected to AWS",
+                "Used Arduino, ESP8266, and sensors to build a prototype",
+                "Worked with AWS IoT, AWS Lambda, and other cloud services",
+                "Presented project at a district tech conference and blogged weekly updates"
+            
+            ],
+            "images": ["/projects/Cloud/FireFinder.png", "/projects/Cloud/App.png", "/projects/Cloud/board.png"],
+            "imageDescriptions": ["", "The app I designed to be able to view fire evacuation routes and manage emergency notifications.", "An early working version of the detector I made with some sensors and wiring I got from school and Amazon. I later made a 3D printed case for it."],
+            "links": ["https://sites.google.com/student.lvusd.org/firefinder/weekly-updates"]
+        }
+    ]
 }

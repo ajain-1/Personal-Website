@@ -31,7 +31,7 @@ import { ChakraNextImage } from './ChakraImg'
 export default function Projects() {
 
   return (
-    <Box px={10} py={5}>
+    <Box px={[5, 5, 10]} py={5}>
         <Heading fontSize={'2xl'} mb={5}>Projects</Heading>
         <Text fontSize={'lg'} pt={0} mb={4} fontWeight={500}>Robotics</Text>
             <SimpleGrid columns={[1, 1, 2]} spacing={4}>
@@ -51,19 +51,26 @@ export default function Projects() {
             </SimpleGrid>
         <Text fontSize={'lg'} pt={5} mb={4} fontWeight={500}>Software Development</Text>
         <SimpleGrid columns={[1, 1, 2]} spacing={4}>
-                {projects.software.map(({ name, year, description, images, imageDescriptions }) => (
+                {projects.software.map(({ name, year, description, images, imageDescriptions, links }) => (
                     <Box key={name} h='100%'>
-                        <Project name={name} year={year} description={description} images={images} idesc={imageDescriptions}></Project>
+                        <Project name={name} year={year} description={description} images={images} idesc={imageDescriptions} links={links}></Project>
                     </Box>
                 ))}
             </SimpleGrid>
         <Text fontSize={'lg'} pt={5} mb={4} fontWeight={500}>Cloud Development and More</Text>
+        <SimpleGrid columns={[1, 1, 2]} spacing={4}>
+                {projects.cloud.map(({ name, year, description, images, imageDescriptions, links }) => (
+                    <Box key={name} h='100%'>
+                        <Project name={name} year={year} description={description} images={images} idesc={imageDescriptions} links={links}></Project>
+                    </Box>
+                ))}
+            </SimpleGrid>
    </Box>
   )
 }
 
-function Project(props: { name: string; year: string; description: Array<String>; images: Array<String>; idesc: Array<string> }) {
-    const { name, year, description, images, idesc } = props
+function Project(props: { name: string; year: string; description: Array<String>; images: Array<String>; idesc: Array<string>; links?: Array<string> }) {
+    const { name, year, description, images, idesc, links } = props
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [image, setimage] = useState({
         src: '',
@@ -80,6 +87,7 @@ function Project(props: { name: string; year: string; description: Array<String>
     return (
         
         <Box
+        minH={'260px'}
         w={'full'}
         bgColor='gray.100'
         borderRadius='10px'
@@ -97,15 +105,22 @@ function Project(props: { name: string; year: string; description: Array<String>
         
         {
             description.map((desc?: any) => (
-                <ListItem key={desc} fontSize='0.9em'>{desc}</ListItem>
+                <ListItem key={desc} fontSize={['0.75em', '0.8em', '0.8em']}>{desc}</ListItem>
             ))
         }
         </UnorderedList>
-        {images.length > 1 ? <Flex w="inherit" flexDirection={'row'} overflowX='scroll' overflowY={'scroll'} h={'70px'} >
+        {images.length > 1 ? <Flex flexDirection={'row'} className={'container'} overflowX='scroll'>
         {
             images.map((imageUrl: any) => (
-                <Flex key={imageUrl} mr={3} minW='70px'>
-                    <IMG src={imageUrl} style={{borderRadius: '25px'}} width='70px' height='70px' alt={imageUrl} className='image' onClick={(e) => {handleImageClick(e)}}></IMG>
+                <Flex key={imageUrl} mr={3} minW='70px' minH={'70px'}>
+                    <IMG src={imageUrl} style={{borderRadius: '20px'}} width='70px' height='70px' alt={imageUrl} className='image' onClick={(e) => {
+                    
+                    if (links?.[images.indexOf(imageUrl)]) {
+                        window.open(links?.[images.indexOf(imageUrl)], '_blank')
+                    } else {
+                        handleImageClick(e)
+                    }
+                    }}></IMG>
                 </Flex>       
             ))
         }

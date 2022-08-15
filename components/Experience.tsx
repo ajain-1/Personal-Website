@@ -81,7 +81,7 @@ const experiences = [
 ]
 
   return (
-    <Box px={10} py={5}>
+    <Box px={[5, 5, 10]} py={5}>
         <Heading fontSize={'2xl'} mb={5}>Experience</Heading>
         <SimpleGrid columns={[1, 1, 3]} spacing={4}>
         {experiences.map(({ title, company, date, description, imageUrl }) => (
