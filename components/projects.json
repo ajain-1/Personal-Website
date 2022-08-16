@@ -11,6 +11,7 @@
                 "Trained the robot for autonomous movement using sensor inputs"
             ],
             "images": [
+                "/projects/Robotics/VEXWorlds.jpeg",
                 "/projects/Robotics/IMG_8869.HEIC",
                 "/projects/Robotics/IMG_8866.HEIC",
                 "/projects/Robotics/IMG_8862.HEIC",
@@ -19,6 +20,7 @@
                 "/projects/Robotics/IMG_8893.HEIC"
             ], 
             "imageDescriptions": [
+                "We were part of the science division at the VEX World Championship.",
                 "I designed, built, and programmed this robot during spring of 2022 (this was the final iteration).",
                 "I added systems like pneumatic pistons (at about 100psi) and 8 DC Motors to perform tasks. Also uses inertial sensors and other sensors (added after this picture) like optical sensors, distance sensors, and GPS sensors to navigate the field. ",
                 "Operates on a 6 motor drivebase and reaches speeds of 280rpm on 4 inch wheels. Uses center traction wheels to climb up platforms and omnidirectional wheels to increase manueverability.",
@@ -142,6 +144,20 @@
     ], 
     "software": [
         {
+            "name": "Machina Labs (Toolset)",
+            "year": "2022",
+            "description" : [
+                "Architected and developed cloud-based internal toolset for Machina Labs",
+                "Machina Labs is innovating with robotic incremental forming",
+                "Brought computational design and robot path planning scripts to the cloud",
+                "Enabled generating robot paths and editing complex geometries in the web"
+            
+            ],
+            "images": ["/projects/Software/MachinaLabs.png", "/projects/Software/MachinaLogo.jpeg", "/projects/Software/GIF.png"],
+            "imageDescriptions": ["Incremental Robotic Forming at Machina Labs at work!"],
+            "links": ["", "https://www.machinalabs.ai", "https://dot.la/media-library/machina-labs-robots-molding-3d-metals.gif?id=29222911&width=980"]
+        },
+        {
             "name": "Hirezz (Mobile App)",
             "year": "2020",
             "description" : [
@@ -177,35 +193,36 @@
                 "/AllayTax.png",
                 "/projects/Software/AllayHome.png",
                 "/projects/Software/AllayBlog.png",
-                "/projects/Software/About.png"
-                
+                "/projects/Software/About.png",
+                "/projects/Software/Cache.png"
                 
             ], 
-            "imageDescriptions": [
+            "imageDescriptions": ["",
                 "Home page of the website. The focus was on improving user conversion rate, so the contact form was a central part of the page.",
                 "A CMS was implemented so that blog posts about tax issues can easily be written and updated.",
-                "Some info about the company and the services they provide."
+                "Some info about the company and the services they provide.",
+                "Implemented Cloudflare CDN along with caching to speed up the website performance."
             ],
             "links" : [
                 "https://www.allaytax.com","", "", ""
             ]
-        },
-        {
-            "name": "Machina Labs (Toolset)",
-            "year": "2022",
-            "description" : [
-                "Architected and developed cloud-based internal toolset for Machina Labs",
-                "Machina Labs is innovating with robotic incremental forming",
-                "Brought computational design and robot path planning scripts to the cloud",
-                "Enabled generating robot paths and editing complex geometries in the web"
-            
-            ],
-            "images": ["/projects/Software/MachinaLabs.png", "/projects/Software/MachinaLogo.jpeg", "/projects/Software/GIF.png"],
-            "imageDescriptions": ["Incremental Robotic Forming at Machina Labs at work!"],
-            "links": ["", "https://www.machinalabs.ai", "https://dot.la/media-library/machina-labs-robots-molding-3d-metals.gif?id=29222911&width=980"]
         }
     ],
     "cloud": [
+        {
+            "name": "BIM and 3D Design at Martin Bros",
+            "year": "2021",
+            "description" : [
+                "Modeled Floor 42 Unit 2 of The Grand in LA using Revit",
+                "Designed and modeled an electric scooter and bike curbside stand",
+                "Used software such as AutoCAD, Revit, and Bluebeam",
+                "Presented and detailed project to senior Martin Bros engineers and leaders"
+            
+            ],
+            "images": ["/projects/Cloud/MartinBros.png", "/projects/Cloud/Grand.png", "/projects/Cloud/Stand.png"],
+            "imageDescriptions": ["", "I designed Floor 42 Unit 2 of The Grand using Autodesk Revit and other BIM tools.", "Has features like a vending machine, water refill station, and a modern design."],
+            "links": ["https://docs.google.com/presentation/d/1QFeQDjh0_LZKQ9U9a7Q7J7a6YjmAHs75XjT80YTTypc/edit?usp=sharing"]
+        },
         {
             "name": "FireFinder",
             "year": "2019",
@@ -213,12 +230,13 @@
                 "Created a smart fire detection system connected to AWS",
                 "Used Arduino, ESP8266, and sensors to build a prototype",
                 "Worked with AWS IoT, AWS Lambda, and other cloud services",
-                "Presented project at a district tech conference and blogged weekly updates"
+                "Presented project at a district tech conference and blogged weekly"
             
             ],
             "images": ["/projects/Cloud/FireFinder.png", "/projects/Cloud/App.png", "/projects/Cloud/board.png"],
             "imageDescriptions": ["", "The app I designed to be able to view fire evacuation routes and manage emergency notifications.", "An early working version of the detector I made with some sensors and wiring I got from school and Amazon. I later made a 3D printed case for it."],
             "links": ["https://sites.google.com/student.lvusd.org/firefinder/weekly-updates"]
         }
+        
     ]
 }

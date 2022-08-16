@@ -78,7 +78,7 @@ const Home: NextPage = () => {
           </a>
       </Flex>
       </Hide>
-      <Flex flex={1} h='100vh' bgColor='F1ECCE' flexDir={'column'} overflow='scroll'>
+      <Flex flex={1} h='100vh' bgColor='F1ECCE' flexDir={'column'} overflowY='scroll' overflowX={'hidden'}>
       <Show below='md' >
       <Flex w='full' h='50px' position='sticky' top={0} zIndex={1}>
         <Spacer/>
