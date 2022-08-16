@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, HStack,Button, Icon, VStack, Text, Spacer, Show, Hide } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack,Button, Icon, VStack, Text, Spacer, Show, Hide, Center } from '@chakra-ui/react'
 import {IoSchoolOutline, IoGridOutline, IoMenuOutline, IoBasketballOutline,  IoList , IoStarOutline, IoBriefcaseOutline, IoPersonOutline, IoMenu} from 'react-icons/io5'
 import type { NextPage } from 'next'
 import { useState } from 'react'
@@ -80,14 +80,16 @@ const Home: NextPage = () => {
       </Hide>
       <Flex flex={1} h='100vh' bgColor='F1ECCE' flexDir={'column'} overflowY='scroll' overflowX={'hidden'}>
       <Show below='md' >
-      <Flex w='full' h='50px' position='sticky' top={0} zIndex={1}>
-        <Spacer/>
-        <Icon as={IoMenuOutline} boxSize={'2.5em'} onClick={() => {
+      <Flex>
+        <Center bgColor={'white'} borderRadius='50%' position='absolute' top={5} right={5} zIndex={1} onClick={() => {
           setMenu(!menu);
           
-        }}></Icon>
+        }}>
+<Icon as={IoMenuOutline} boxSize={'2.5em'}></Icon>
+        </Center>
+        
       
-        {menu ? <Flex w={'70vw'}  position='absolute' top={0} left={0} flexDir='column' h='100vh' bgColor={'#1b2432'} p="5" pt={8} color={'white'}>
+        {menu ? <Flex w={'70vw'} zIndex={1}  position='absolute' top={0} left={0} flexDir='column' h='100vh' bgColor={'#1b2432'} p="5" pt={8} color={'white'}>
           {/* <Heading fontSize={'3xl'} ml={4} mb="7" fontWeight={'900'}>Aryan Jain</Heading> */}
           <VStack spacing={3}>
             {links.map(({ link, title, icon }) => (

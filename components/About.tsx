@@ -3,16 +3,18 @@ import {
     Flex,
     Heading,
     Image,
-
+    Box,
     Stack,
     Text,
+    AspectRatio,
+    Spacer,
  
   } from '@chakra-ui/react';
   
   export default function About() {
     return (
-      <Stack direction={{ base: 'column', md: 'row' }} bgColor='gray.100' h={[null, null, "50vh"]}>
-        <Flex pl={8} align={'center'} justify={'center'} flex={1} justifyContent='start' minW={'50vw'}>
+      <Flex direction={{ base: 'column', md: 'row' }} bgColor='gray.100' h={[null, null, "50vh"]} maxW='100%'>
+        <Flex px={8} pt={[10, 10, 0]} align={'center'} justify={'center'} justifyContent='start'>
           <Stack spacing={6} w={'full'} maxW={'lg'}>
             <Heading fontSize={{ base: '4xl', md: '4xl', lg: '5xl' }}>
               <Text
@@ -53,10 +55,11 @@ import {
             </Stack>
           </Stack>
         </Flex>
-        <Flex p={[8, 8, 10]} minW='full'>
-        <Image src='/IMG_9066.jpg' alt='profile' borderRadius='20px' boxShadow={'dark-lg'} h='full'></Image>
+        <Spacer/>
+        <Flex p={10}>
+          <Image src='/IMG_9066.jpg' alt='profile' borderRadius='20px' boxShadow={'dark-lg'} h='full' w='full'></Image>
         </Flex>
-      </Stack>
+      </Flex>
 
     
     );
