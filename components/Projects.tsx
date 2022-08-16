@@ -113,7 +113,7 @@ function Project(props: { name: string; year: string; description: Array<String>
         {
             images.map((imageUrl: any) => (
                 <Flex key={imageUrl} mr={3} minW='70px' minH={'70px'}>
-                    <IMG src={imageUrl} style={{borderRadius: '20px'}} width='70px' height='70px' alt={imageUrl} className='image' onClick={(e) => {
+                    <IMG src={imageUrl} style={{borderRadius: '20px'}} objectFit='cover' width='70px' height='70px' alt={imageUrl} className='image' onClick={(e) => {
                     
                     if (links?.[images.indexOf(imageUrl)]) {
                         window.open(links?.[images.indexOf(imageUrl)], '_blank')

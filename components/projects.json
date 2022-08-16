@@ -153,9 +153,9 @@
                 "Enabled generating robot paths and editing complex geometries in the web"
             
             ],
-            "images": ["/projects/Software/MachinaLabs.png", "/projects/Software/MachinaLogo.jpeg", "/projects/Software/GIF.png"],
+            "images": ["/projects/Software/MachinaLabs.png", "/projects/Software/ML.JPG" ,"/projects/Software/MachinaLogo.jpeg", "/projects/Software/GIF.png"],
             "imageDescriptions": ["Incremental Robotic Forming at Machina Labs at work!"],
-            "links": ["", "https://www.machinalabs.ai", "https://dot.la/media-library/machina-labs-robots-molding-3d-metals.gif?id=29222911&width=980"]
+            "links": ["", "","https://www.machinalabs.ai", "https://dot.la/media-library/machina-labs-robots-molding-3d-metals.gif?id=29222911&width=980"]
         },
         {
             "name": "Hirezz (Mobile App)",
