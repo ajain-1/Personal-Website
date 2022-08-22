@@ -28,7 +28,7 @@ import {
                 Student & Software Developer
               </Text>{' '}
             </Heading>
-            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'} my={4} maxW='600px'>
+            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'} my={4} maxW='550px'>
               Passionate about AI, Robotics, and Entrepreneurship. Experienced in Cloud and Web Development. Always building something new.
             </Text>
             <Stack direction={'row'} spacing={4}>
