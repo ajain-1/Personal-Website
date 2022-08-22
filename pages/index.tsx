@@ -2,7 +2,6 @@ import { Box, Flex, Heading, HStack,Button, Icon, VStack, Text, Spacer, Show, Hi
 import {IoSchoolOutline, IoGridOutline, IoMenuOutline, IoBasketballOutline,  IoList , IoStarOutline, IoBriefcaseOutline, IoPersonOutline, IoMenu} from 'react-icons/io5'
 import type { NextPage } from 'next'
 import { useState } from 'react'
-import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
@@ -14,6 +13,7 @@ import Hobbies from '../components/Hobbies'
 import Projects from '../components/Projects'
 
 import { NextSeo } from 'next-seo';
+import Head from 'next/head'
 
 const Home: NextPage = () => {
 
@@ -61,6 +61,9 @@ const Home: NextPage = () => {
 
   return (
     <Flex maxH={'100vh'}>
+      <Head>
+        <link rel='icon' href='/icon.png'></link>
+      </Head>
  
       <Flex w={'20vw'} flexDir='column' dir='column' maxH='100vh' bgColor={'#1b2432'} p="5" pt={8} color={'white'} display={['none', 'none', 'inherit']}>
           {/* <Heading fontSize={'3xl'} ml={4} mb="7" fontWeight={'900'}>Aryan Jain</Heading> */}
