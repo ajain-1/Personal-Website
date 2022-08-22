@@ -13,9 +13,9 @@ import {
   
   export default function About() {
     return (
-      <Flex direction={{ base: 'column', md: 'row' }} bgColor='gray.100' h={[null, null, "50vh"]} maxW='100%'>
-        <Flex px={8} pt={[10, 10, 0]} align={'center'} justify={'center'} justifyContent='start'>
-          <Stack spacing={6} w={'full'} maxW={'lg'}>
+      <Flex direction={{ base: 'column', md: 'row' }} bgColor='gray.100'>
+        <Flex px={8} pt={[10, 10, 0]} align={'start'} justify={'center'} width={'100%'} direction="column">
+          
             <Heading fontSize={{ base: '4xl', md: '4xl', lg: '5xl' }}>
               <Text
                 as={'span'}
@@ -28,7 +28,7 @@ import {
                 Student & Software Developer
               </Text>{' '}
             </Heading>
-            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
+            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'} my={4}>
               Passionate about AI, Robotics, and Entrepreneurship. Experienced in Cloud and Web Development. Always building something new.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
@@ -53,12 +53,9 @@ import {
               
     
             </Stack>
-          </Stack>
+      
         </Flex>
-        <Spacer/>
-        <Flex p={10}>
-          <Image src='/IMG_9066.jpg' alt='profile' borderRadius='20px' boxShadow={'dark-lg'} h='full' w='full'></Image>
-        </Flex>
+        <Image src='/IMG_9066.jpg' alt='profile' borderRadius='20px' boxShadow={'dark-lg'} m={10} mr={[null, null, 10]} mx='auto' boxSize={'350px'}></Image>
       </Flex>
 
     

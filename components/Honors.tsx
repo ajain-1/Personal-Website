@@ -37,7 +37,7 @@ export default function Honors() {
             date: '2022 • Dallas, TX',
             description: 
             ['Led team to VEX RC World Tournament as captain and programmer', 
-            'One of the top teams (#12 seed) out of over 11,000 teams worldwide' 
+            'One of the top teams (#34 seed) out of over 11,000 teams worldwide' 
             ],
             imageUrl: '/VEXRobotics.jpeg',
         },

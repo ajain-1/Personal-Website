@@ -106,9 +106,9 @@ const Home: NextPage = () => {
       </Flex> : null}
       </Flex>
       </Show>
-        <Box id='about'>
+        <div id='about'>
           <About/>
-        </Box>
+        </div>
         <Box id='experience'>
           <Experience></Experience>
         </Box>
