@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /IMG_9066.jpg

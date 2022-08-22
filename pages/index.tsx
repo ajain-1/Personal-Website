@@ -13,6 +13,7 @@ import Honors from '../components/Honors'
 import Hobbies from '../components/Hobbies'
 import Projects from '../components/Projects'
 
+import { NextSeo } from 'next-seo';
 
 const Home: NextPage = () => {
 
@@ -60,8 +61,8 @@ const Home: NextPage = () => {
 
   return (
     <Flex maxH={'100vh'}>
-      <Hide below='md'>
-      <Flex w={'20vw'} flexDir='column' h='100vh' bgColor={'#1b2432'} p="5" pt={8} color={'white'}>
+ 
+      <Flex w={'20vw'} flexDir='column' dir='column' maxH='100vh' bgColor={'#1b2432'} p="5" pt={8} color={'white'} display={['none', 'none', 'inherit']}>
           {/* <Heading fontSize={'3xl'} ml={4} mb="7" fontWeight={'900'}>Aryan Jain</Heading> */}
           <VStack spacing={3}>
             {links.map(({ link, title, icon }) => (
@@ -71,13 +72,14 @@ const Home: NextPage = () => {
               <Text fontSize="lg" fontWeight={'600'}>{title}</Text>
             </Flex>
             ))}
+            
           </VStack>
           <Spacer/>
           <a href='mailto:ajain.mss@gmail.com'>
             <Button bgColor={'white'} color='black' w='100%' _hover={{bgColor: 'gray.600', color:'white'}}>Contact</Button>
           </a>
       </Flex>
-      </Hide>
+
       <Flex flex={1} h='100vh' bgColor='F1ECCE' flexDir={'column'} overflowY='scroll' overflowX={'hidden'}>
       <Show below='md' >
       <Flex>
