@@ -14,7 +14,7 @@ import {
   export default function About() {
     return (
       <Flex direction={{ base: 'column', md: 'row' }} bgColor='gray.100'>
-        <Flex px={8} pt={[10, 10, 0]} align={'start'} justify={'center'} width={'100%'} direction="column">
+        <Flex px={8} pt={[10, 10, 0]}  align={'start'} justify={'center'} width={'100%'} direction="column">
           
             <Heading fontSize={{ base: '4xl', md: '4xl', lg: '5xl' }}>
               <Text
@@ -28,10 +28,10 @@ import {
                 Student & Software Developer
               </Text>{' '}
             </Heading>
-            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'} my={4}>
+            <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'} my={4} maxW='600px'>
               Passionate about AI, Robotics, and Entrepreneurship. Experienced in Cloud and Web Development. Always building something new.
             </Text>
-            <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+            <Stack direction={'row'} spacing={4}>
               <a href='mailto:ajain.mss@gmail.com?body=%0D%0A%0D%0A'>
               <Button
               width={'100%'}
