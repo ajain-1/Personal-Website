@@ -29,7 +29,7 @@ export default function Honors() {
     },
     {
       title: "STEAM Award",
-      institution: "Calabasas High School",
+      institution: "CHS",
       date: "2020",
       description: ["Received the school STEAM award for excellence in its fields"],
       imageUrl: "/CalabasasHS.jpeg",
