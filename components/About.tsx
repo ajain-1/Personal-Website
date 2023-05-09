@@ -34,7 +34,7 @@ export default function About() {
           </a>
         </Stack>
       </Flex>
-      <Image src="/pfp.JPEG" alt="profile" borderRadius="15px" boxShadow={"dark-lg"} m={10} mr={[null, null, 10]} mx="auto" width={"350px"} height={"300px"}></Image>
+      <Image src="/pfp2.JPEG" alt="profile" borderRadius="15px" boxShadow={"dark-lg"} m={10} mr={[null, null, 10]} mx="auto" width={"350px"}></Image>
     </Flex>
   );
 }
