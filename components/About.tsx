@@ -12,7 +12,7 @@ export default function About() {
           </Text>{" "}
         </Heading>
         <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"} my={4} maxW="550px">
-          Passionate about AI, Robotics, and Entrepreneurship. Experienced in Software Development. Always building something new.
+          Passionate about ML, Robotics, and Entrepreneurship. Experienced in Software Development. Always building something new.
         </Text>
         <Stack direction={"row"} spacing={4}>
           <a href="mailto:ajain.mss@gmail.com?body=%0D%0A%0D%0A">
@@ -34,7 +34,7 @@ export default function About() {
           </a>
         </Stack>
       </Flex>
-      <Image src="/pfp.JPEG" alt="profile" borderRadius="20px" boxShadow={"dark-lg"} m={10} mr={[null, null, 10]} mx="auto" boxSize={"350px"}></Image>
+      <Image src="/pfp.JPEG" alt="profile" borderRadius="20px" boxShadow={"dark-lg"} m={10} mr={[null, null, 10]} mx="auto" boxSize={"400px"}></Image>
     </Flex>
   );
 }
