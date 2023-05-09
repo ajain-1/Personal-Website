@@ -7,12 +7,12 @@ export default function About() {
         <Heading fontSize={{ base: "4xl", md: "4xl", lg: "5xl" }}>
           <Text as={"span"}>Aryan Jain</Text>
           <br />
-          <Text bgGradient="linear(to-r, blue.400,purple.900)" bgClip={"text"} mt={3} fontSize="2xl">
-            Student & Software Developer
+          <Text bgClip={"text"} mt={3} fontSize="xl">
+            Student & Software Developer | Carnegie Mellon SCS '27
           </Text>{" "}
         </Heading>
         <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"} my={4} maxW="550px">
-          Passionate about ML, Robotics, and Entrepreneurship. Experienced in Software Development. Always building something new.
+          Passionate about ML and Robotics. Experienced in Software Development. Always building something new.
         </Text>
         <Stack direction={"row"} spacing={4}>
           <a href="mailto:ajain.mss@gmail.com?body=%0D%0A%0D%0A">

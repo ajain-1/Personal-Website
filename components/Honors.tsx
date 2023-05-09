@@ -14,17 +14,24 @@ export default function Honors() {
 
   const honors = [
     {
-      title: "VEX World Championship Division Finalists",
+      title: "Southern California Edison 2023 Scholar",
+      institution: "Edison International",
+      date: "2023 • Los Angeles, CA",
+      description: ["50k Scholarship from Edison International to study STEM"],
+      imageUrl: "/edison.jpeg",
+    },
+    {
+      title: "VEX World Championship - Science Division (2x)",
       institution: "VEX Robotics",
-      date: "2022 • Dallas, TX",
-      description: ["Led team to VEX RC World Tournament as captain and programmer", "One of the top teams (#34 seed) out of over 11,000 teams worldwide"],
+      date: "2022, 2023 • Dallas, TX",
+      description: ["Led team to VEX RC World Tournament as captain and programmer", "One of the top teams in division out of over 11,000 teams worldwide"],
       imageUrl: "/VEXRobotics.jpeg",
     },
     {
-      title: "VEX Robotics State Championship (2x)",
+      title: "VEX Robotics State Championship (3x)",
       institution: "VEX Robotics",
-      date: "2019, 2022 • San Diego, CA",
-      description: ["Qualified for the VEX Robotics State Championship in 2019 and 2022", "Won as state finalists and qualified for the World Championship"],
+      date: "2019, 2022, 2023 • San Diego, CA | Los Angeles, CA",
+      description: ["Qualified for the VEX Robotics State Championship in 2019, 2022, and 2023", "Won as state finalists at San Diego (2022) and Los Angeles (2023) and qualified for the World Championship"],
       imageUrl: "/VEXRobotics.jpeg",
     },
     {

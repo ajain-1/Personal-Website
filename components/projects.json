@@ -1,242 +1,113 @@
 {
-    "robotics" : [
-         
-        {
-            "name": "VEX Robotics - Tipping Point",
-            "year": "2021",
-            "description" : [
-                "Designed, built, and programmed three robots throughout the year",
-                "Led team to VEX State and World Championships as captain",
-                "Applied core robot design principles and programming techniques",
-                "Trained the robot for autonomous movement using sensor inputs"
-            ],
-            "images": [
-                "/projects/Robotics/VEXWorlds.jpeg",
-                "/projects/Robotics/IMG_8869.HEIC",
-                "/projects/Robotics/IMG_8866.HEIC",
-                "/projects/Robotics/IMG_8862.HEIC",
-                "/projects/Robotics/IMG_8813.HEIC",
-                "/projects/Robotics/IMG_8816.HEIC",
-                "/projects/Robotics/IMG_8893.HEIC"
-            ], 
-            "imageDescriptions": [
-                "We were part of the science division at the VEX World Championship.",
-                "I designed, built, and programmed this robot during spring of 2022 (this was the final iteration).",
-                "I added systems like pneumatic pistons (at about 100psi) and 8 DC Motors to perform tasks. Also uses inertial sensors and other sensors (added after this picture) like optical sensors, distance sensors, and GPS sensors to navigate the field. ",
-                "Operates on a 6 motor drivebase and reaches speeds of 280rpm on 4 inch wheels. Uses center traction wheels to climb up platforms and omnidirectional wheels to increase manueverability.",
-                "Qualified for Worlds by winning as State Finalists in at the San Diego VEX Robotics State Championship.",
-                "The robot has enough traction and power to balance itself (weighs around 20lbs) and around 15lbs of weighted goal posts onto the platform.",
-                "Event at VEX Worlds Championship in Dallas, TX."
-            ]
-        },
-        {
-            "name": "VEX Robotics - Tower Takeover",
-            "year": "2019",
-            "description" : [
-                "Robot used a double reverse 4 bar system to achieve a height of 7ft",
-                "Helped design, build, and program the robot as team captain",
-                "Featured in local newspaper and presented to City of Calabasas",
-                "Programmed for autonomous path planning and control using C++"
-            ],
-            "images": [
-                "/projects/Robotics/MayorRobot.png",
-                "/projects/Robotics/RobotScore.png",
-                "/projects/Robotics/RobotMatch.JPG",
-                "/projects/Robotics/TowerRobot.png",
-                "/projects/Robotics/RobotCode.png"
-            ], 
-            "imageDescriptions": [
-                "",
-                "One of our early season tournament wins at Ventura County Office of Education.",
-                "An impressive stack of cubes that our robot managed to put up and win us a match.",
-                "The robot (creatively nicknamed 'Cube Bot').",
-                "Snippet of the robot code (using the PROSV5 API from Purdue University)."
-            ]
-        }
-    ],
-    "ai": [
-        {
-            "name": "Plant Disease Detection and Classification",
-            "year": "2021",
-            "description" : [
-                "Built a computer vision model using ResNet architecture",
-                "Can identify and categorize plant disease with high accuracy",
-                "Presented findings at Carnegie Mellon's AI4ALL Research Program",
-                "Used data augmentation to increase training data"
-            ],
-            "images": [
-                "/projects/AI/Outputs.png",
-                "/projects/AI/Final.png",
-                "/projects/AI/DataSplit.png",
-                "/projects/AI/DataAug.png"
-                
-            ], 
-            "imageDescriptions": [
-                "Ouput images from classification model",
-                "Final accuracy on validation data: 0.931.",
-                "Split of training and testing data.",
-                "Some simple methods we used to increase our available data."
-                
-            ]
-        },
-        {
-            "name": "Object Detection and Bounding (CNN)", 
-            "year": "2021",
-            "description" : [
-                "Created an AI model to detect common road objects in a given scene",
-                "Could be applied in autonomous driving and other areas",
-                "Presented research project to students and graduates in Inspirit AI",
-                "Used 3 CNN approaches: Perceptron, Sliding Windows, and YOLO"
-            ],
-            "images": [
-                "/projects/AI/CoverSlide.png",
-                "/projects/AI/SlidingWindows.png",
-                "/projects/AI/CNNSliding.png",
-                "/projects/AI/VGGNN.png",
-                "/projects/AI/YOLO.png",
-                "/projects/AI/YOLOResult.png"    
-            ], 
-            "imageDescriptions": [
-                "We presented to over a hundred students in Inspirit AI. Others had interesting projects they chose to research such as in sentiment analysis, fake news detection, and justice.",
-                "Our second approach (after using a Perceptron) was to use sliding windows to run our model on smaller parts of an image in hopes of increasing accuracy.",
-                "Initially, a basic CNN model inputted with individual windows produced just an 82 percent accuracy, so we decided to change our approach.",            
-                "We used an image classification model called VGG NN to better classify objects and achieved a 95% accuracy.",  
-                "Finally, we also tried the 'You Only Look Once' model, which is a model that uses a DarkNet model to detect objects in an image by splitting the image into cells rather than using sliding windows.",
-                "The YOLO approach produces a confidence level for each object it detects. This is a sample image we ran through the model."  
-            ]
-        },
-        {
-            "name": "Tumor Classification (Regression)",
-            "year": "2021",
-            "description" : [
-                "Made an AI model to classify breast tumors as benign or malignant",
-                "Uses features such as tumor radius, surface area, and shape",
-                "Implemented a model that used multivariable regression",
-                "Used public dataset from health agencies with biopsies"
-            ],
-            "images": [
-                "/projects/AI/TClass.png",
-                "/projects/AI/Features.png",
-                "/projects/AI/SingleFeature.png"
-            
-                
-            ], 
-            "imageDescriptions": [
-                "Visual difference between benign and malignant tumors.",
-                "The features we used to train our model.",
-                "Regression model that used a single feature (radius measurement). Using one feature alone doesn't produce great accuracy (around 90%), so we moved to multi-feature regression and saw an improvement of 3% on the validation set (still lots of room for improvement)."            
-            ]
-        },
-        {
-            "name": "Other AI Projects",
-            "year": "",
-            "description" : [
-                "Made an reinforcement learning model to play blackjack against. Used an Epsilon-Greedy learning approach.",
-                "Project to align 3d models to Scan with Bayesian Optimization at Machina Labs (NDA)",
-                "Many smaller labs and projects at Inspirit AI and AI4ALL @ CMU"
-            ],
-            "images": [""],
-            "imageDescriptions": [""]
-            
-        }
-        
-        
-    ], 
-    "software": [
-        {
-            "name": "Machina Labs (Toolset)",
-            "year": "2022",
-            "description" : [
-                "Architected and developed cloud-based internal toolset for Machina Labs",
-                "Machina Labs is innovating with robotic incremental forming",
-                "Brought computational design and robot path planning scripts to the cloud",
-                "Enabled generating robot paths and editing complex geometries in the web"
-            
-            ],
-            "images": ["/projects/Software/MachinaLabs.png", "/projects/Software/ML.JPG" ,"/projects/Software/MachinaLogo.jpeg", "/projects/Software/GIF.png"],
-            "imageDescriptions": ["Incremental Robotic Forming at Machina Labs at work!"],
-            "links": ["", "","https://www.machinalabs.ai", "https://dot.la/media-library/machina-labs-robots-molding-3d-metals.gif?id=29222911&width=980"]
-        },
-        {
-            "name": "Hirezz (Mobile App)",
-            "year": "2020",
-            "description" : [
-                "Developed MVP for company I cofounded, Hirezz",
-                "Designed with Figma and developed with Flutter and Firebase", 
-                "A social networking app to discover and hire home contractors",
-                "Learned how to make an idea into a product"
-            ],
-            "images": [
-                "/projects/Software/Chat.png",
-                "/projects/Software/Home.png",
-                "/projects/Software/Search.png",
-                "/projects/Software/Logo.png"
-                
-            ], 
-            "imageDescriptions": [
-                "Some of the code (using Flutter) for the chat screen alongside the app running on an IOS emulator.",
-                "The home screen of the app I designed and developed.",
-                "Search screen (we used Algolia search)."
-            ]
-           
-        },
-        {
-            "name": "Allay Tax (Website)",
-            "year": "2020",
-            "description" : [
-                "Designed and developed website for tax resolution firm (allaytax.com)",
-                "Optimized website for search engines, performance in key metrics, and UX", 
-                "Resulted in a 2x faster website by using a CDN and caching",
-                "Implemented a CMS for the website to allow for easy updates"
-            ],
-            "images": [
-                "/AllayTax.png",
-                "/projects/Software/AllayHome.png",
-                "/projects/Software/AllayBlog.png",
-                "/projects/Software/About.png",
-                "/projects/Software/Cache.png"
-                
-            ], 
-            "imageDescriptions": ["",
-                "Home page of the website. The focus was on improving user conversion rate, so the contact form was a central part of the page.",
-                "A CMS was implemented so that blog posts about tax issues can easily be written and updated.",
-                "Some info about the company and the services they provide.",
-                "Implemented Cloudflare CDN along with caching to speed up the website performance."
-            ],
-            "links" : [
-                "https://www.allaytax.com","", "", ""
-            ]
-        }
-    ],
-    "cloud": [
-        {
-            "name": "BIM and 3D Design at Martin Bros",
-            "year": "2021",
-            "description" : [
-                "Modeled Floor 42 Unit 2 of The Grand in LA using Revit",
-                "Designed and modeled an electric scooter and bike curbside stand",
-                "Used software such as AutoCAD, Revit, and Bluebeam",
-                "Presented and detailed project to senior Martin Bros engineers and leaders"
-            
-            ],
-            "images": ["/projects/Cloud/MartinBros.png", "/projects/Cloud/Grand.png", "/projects/Cloud/Stand.png"],
-            "imageDescriptions": ["", "I designed Floor 42 Unit 2 of The Grand using Autodesk Revit and other BIM tools.", "Has features like a vending machine, water refill station, and a modern design."],
-            "links": ["https://docs.google.com/presentation/d/1QFeQDjh0_LZKQ9U9a7Q7J7a6YjmAHs75XjT80YTTypc/edit?usp=sharing"]
-        },
-        {
-            "name": "FireFinder",
-            "year": "2019",
-            "description" : [
-                "Created a smart fire detection system connected to AWS",
-                "Used Arduino, ESP8266, and sensors to build a prototype",
-                "Worked with AWS IoT, AWS Lambda, and other cloud services",
-                "Presented project at a district tech conference and blogged weekly"
-            
-            ],
-            "images": ["/projects/Cloud/FireFinder.png", "/projects/Cloud/App.png", "/projects/Cloud/board.png"],
-            "imageDescriptions": ["", "The app I designed to be able to view fire evacuation routes and manage emergency notifications.", "An early working version of the detector I made with some sensors and wiring I got from school and Amazon. I later made a 3D printed case for it."],
-            "links": ["https://sites.google.com/student.lvusd.org/firefinder/weekly-updates"]
-        }
-        
-    ]
+  "robotics": [
+    {
+      "name": "VEX Robotics - Spin Up",
+      "year": "2023",
+      "description": ["Designed, built, and programmed two robots throughout the year", "Led team to VEX State and World Championships as captain", "Used Flywheel and Catapult robot designs to score discs", "Trained the robot for autonomous movement using sensor inputs"],
+      "images": ["/projects/Robotics/SpinUp/worlds.heic", "/projects/Robotics/SpinUp/both.HEIC", "/projects/Robotics/SpinUp/scata.HEIC", "/projects/Robotics/SpinUp/scata2.HEIC", "/projects/Robotics/SpinUp/flywheel1.JPG", "/projects/Robotics/SpinUp/flywheel2.HEIC"],
+      "imageDescriptions": []
+    },
+    {
+      "name": "VEX Robotics - Tipping Point",
+      "year": "2022",
+      "description": ["Designed, built, and programmed three robots throughout the year", "Led team to VEX State and World Championships as captain", "Applied core robot design principles and programming techniques", "Trained the robot for autonomous movement using sensor inputs"],
+      "images": ["/projects/Robotics/VEXWorlds.jpeg", "/projects/Robotics/IMG_8869.HEIC", "/projects/Robotics/IMG_8866.HEIC", "/projects/Robotics/IMG_8862.HEIC", "/projects/Robotics/IMG_8813.HEIC", "/projects/Robotics/IMG_8816.HEIC", "/projects/Robotics/IMG_8893.HEIC"],
+      "imageDescriptions": [
+        "We were part of the science division at the VEX World Championship.",
+        "I designed, built, and programmed this robot during spring of 2022 (this was the final iteration).",
+        "I added systems like pneumatic pistons (at about 100psi) and 8 DC Motors to perform tasks. Also uses inertial sensors and other sensors (added after this picture) like optical sensors, distance sensors, and GPS sensors to navigate the field. ",
+        "Operates on a 6 motor drivebase and reaches speeds of 280rpm on 4 inch wheels. Uses center traction wheels to climb up platforms and omnidirectional wheels to increase manueverability.",
+        "Qualified for Worlds by winning as State Finalists in at the San Diego VEX Robotics State Championship.",
+        "The robot has enough traction and power to balance itself (weighs around 20lbs) and around 15lbs of weighted goal posts onto the platform.",
+        "Event at VEX Worlds Championship in Dallas, TX."
+      ]
+    },
+    {
+      "name": "VEX Robotics - Tower Takeover",
+      "year": "2020",
+      "description": ["Robot used a double reverse 4 bar system to achieve a height of 7ft", "Helped design, build, and program the robot as team captain", "Featured in local newspaper and presented to City of Calabasas", "Programmed for autonomous path planning and control using C++"],
+      "images": ["/projects/Robotics/MayorRobot.png", "/projects/Robotics/RobotScore.png", "/projects/Robotics/RobotMatch.JPG", "/projects/Robotics/TowerRobot.png", "/projects/Robotics/RobotCode.png"],
+      "imageDescriptions": ["", "One of our early season tournament wins at Ventura County Office of Education.", "An impressive stack of cubes that our robot managed to put up and win us a match.", "The robot (creatively nicknamed 'Cube Bot').", "Snippet of the robot code (using the PROSV5 API from Purdue University)."]
+    }
+  ],
+  "ai": [
+    {
+      "name": "Plant Disease Detection and Classification",
+      "year": "2021",
+      "description": ["Built a computer vision model using ResNet architecture", "Can identify and categorize plant disease with high accuracy", "Presented findings at Carnegie Mellon's AI4ALL Research Program", "Used data augmentation to increase training data"],
+      "images": ["/projects/AI/Outputs.png", "/projects/AI/Final.png", "/projects/AI/DataSplit.png", "/projects/AI/DataAug.png"],
+      "imageDescriptions": ["Ouput images from classification model", "Final accuracy on validation data: 0.931.", "Split of training and testing data.", "Some simple methods we used to increase our available data."]
+    },
+    {
+      "name": "Object Detection and Bounding (CNN)",
+      "year": "2021",
+      "description": ["Created an AI model to detect common road objects in a given scene", "Could be applied in autonomous driving and other areas", "Presented research project to students and graduates in Inspirit AI", "Used 3 CNN approaches: Perceptron, Sliding Windows, and YOLO"],
+      "images": ["/projects/AI/CoverSlide.png", "/projects/AI/SlidingWindows.png", "/projects/AI/CNNSliding.png", "/projects/AI/VGGNN.png", "/projects/AI/YOLO.png", "/projects/AI/YOLOResult.png"],
+      "imageDescriptions": [
+        "We presented to over a hundred students in Inspirit AI. Others had interesting projects they chose to research such as in sentiment analysis, fake news detection, and justice.",
+        "Our second approach (after using a Perceptron) was to use sliding windows to run our model on smaller parts of an image in hopes of increasing accuracy.",
+        "Initially, a basic CNN model inputted with individual windows produced just an 82 percent accuracy, so we decided to change our approach.",
+        "We used an image classification model called VGG NN to better classify objects and achieved a 95% accuracy.",
+        "Finally, we also tried the 'You Only Look Once' model, which is a model that uses a DarkNet model to detect objects in an image by splitting the image into cells rather than using sliding windows.",
+        "The YOLO approach produces a confidence level for each object it detects. This is a sample image we ran through the model."
+      ]
+    },
+    {
+      "name": "Tumor Classification (Regression)",
+      "year": "2021",
+      "description": ["Made an AI model to classify breast tumors as benign or malignant", "Uses features such as tumor radius, surface area, and shape", "Implemented a model that used multivariable regression", "Used public dataset from health agencies with biopsies"],
+      "images": ["/projects/AI/TClass.png", "/projects/AI/Features.png", "/projects/AI/SingleFeature.png"],
+      "imageDescriptions": ["Visual difference between benign and malignant tumors.", "The features we used to train our model.", "Regression model that used a single feature (radius measurement). Using one feature alone doesn't produce great accuracy (around 90%), so we moved to multi-feature regression and saw an improvement of 3% on the validation set (still lots of room for improvement)."]
+    },
+    {
+      "name": "Other AI Projects",
+      "year": "",
+      "description": ["Made an reinforcement learning model to play blackjack against. Used an Epsilon-Greedy learning approach.", "Project to align 3d models to Scan with Bayesian Optimization at Machina Labs (NDA)", "Many smaller labs and projects at Inspirit AI and AI4ALL @ CMU"],
+      "images": [""],
+      "imageDescriptions": [""]
+    }
+  ],
+  "software": [
+    {
+      "name": "Machina Labs (Toolset)",
+      "year": "2022",
+      "description": ["Architected and developed cloud-based internal toolset for Machina Labs", "Machina Labs is innovating with robotic incremental forming", "Brought computational design and robot path planning scripts to the cloud", "Enabled generating robot paths and editing complex geometries in the web"],
+      "images": ["/projects/Software/MachinaLabs.png", "/projects/Software/ML.JPG", "/projects/Software/MachinaLogo.jpeg", "/projects/Software/GIF.png"],
+      "imageDescriptions": ["Incremental Robotic Forming at Machina Labs at work!"],
+      "links": ["", "", "https://www.machinalabs.ai", "https://dot.la/media-library/machina-labs-robots-molding-3d-metals.gif?id=29222911&width=980"]
+    },
+    {
+      "name": "Hirezz (Mobile App)",
+      "year": "2020",
+      "description": ["Developed MVP for company I cofounded, Hirezz", "Designed with Figma and developed with Flutter and Firebase", "A social networking app to discover and hire home contractors", "Learned how to make an idea into a product"],
+      "images": ["/projects/Software/Chat.png", "/projects/Software/Home.png", "/projects/Software/Search.png", "/projects/Software/Logo.png"],
+      "imageDescriptions": ["Some of the code (using Flutter) for the chat screen alongside the app running on an IOS emulator.", "The home screen of the app I designed and developed.", "Search screen (we used Algolia search)."]
+    },
+    {
+      "name": "Allay Tax (Website)",
+      "year": "2020",
+      "description": ["Designed and developed website for tax resolution firm (allaytax.com)", "Optimized website for search engines, performance in key metrics, and UX", "Resulted in a 2x faster website by using a CDN and caching", "Implemented a CMS for the website to allow for easy updates"],
+      "images": ["/AllayTax.png", "/projects/Software/AllayHome.png", "/projects/Software/AllayBlog.png", "/projects/Software/About.png", "/projects/Software/Cache.png"],
+      "imageDescriptions": ["", "Home page of the website. The focus was on improving user conversion rate, so the contact form was a central part of the page.", "A CMS was implemented so that blog posts about tax issues can easily be written and updated.", "Some info about the company and the services they provide.", "Implemented Cloudflare CDN along with caching to speed up the website performance."],
+      "links": ["https://www.allaytax.com", "", "", ""]
+    }
+  ],
+  "cloud": [
+    {
+      "name": "BIM and 3D Design at Martin Bros",
+      "year": "2021",
+      "description": ["Modeled Floor 42 Unit 2 of The Grand in LA using Revit", "Designed and modeled an electric scooter and bike curbside stand", "Used software such as AutoCAD, Revit, and Bluebeam", "Presented and detailed project to senior Martin Bros engineers and leaders"],
+      "images": ["/projects/Cloud/MartinBros.png", "/projects/Cloud/Grand.png", "/projects/Cloud/Stand.png"],
+      "imageDescriptions": ["", "I designed Floor 42 Unit 2 of The Grand using Autodesk Revit and other BIM tools.", "Has features like a vending machine, water refill station, and a modern design."],
+      "links": ["https://docs.google.com/presentation/d/1QFeQDjh0_LZKQ9U9a7Q7J7a6YjmAHs75XjT80YTTypc/edit?usp=sharing"]
+    },
+    {
+      "name": "FireFinder",
+      "year": "2019",
+      "description": ["Created a smart fire detection system connected to AWS", "Used Arduino, ESP8266, and sensors to build a prototype", "Worked with AWS IoT, AWS Lambda, and other cloud services", "Presented project at a district tech conference and blogged weekly"],
+      "images": ["/projects/Cloud/FireFinder.png", "/projects/Cloud/App.png", "/projects/Cloud/board.png"],
+      "imageDescriptions": ["", "The app I designed to be able to view fire evacuation routes and manage emergency notifications.", "An early working version of the detector I made with some sensors and wiring I got from school and Amazon. I later made a 3D printed case for it."],
+      "links": ["https://sites.google.com/student.lvusd.org/firefinder/weekly-updates"]
+    }
+  ]
 }
