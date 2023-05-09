@@ -7,7 +7,7 @@ export default function About() {
         <Heading fontSize={{ base: "4xl", md: "4xl", lg: "5xl" }}>
           <Text as={"span"}>Aryan Jain</Text>
           <br />
-          <Text bgClip={"text"} mt={3} fontSize="xl">
+          <Text bgClip={"text"} mt={3} fontSize="xl" color={"gray.300"}>
             Student & Software Developer | Carnegie Mellon SCS '27
           </Text>{" "}
         </Heading>
