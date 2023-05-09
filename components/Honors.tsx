@@ -21,6 +21,13 @@ export default function Honors() {
       imageUrl: "/edison.jpeg",
     },
     {
+      title: "AWS Certified Solutions Architect",
+      institution: "Amazon Web Services",
+      date: "2019-22",
+      description: ["Passed the AWS Solutions Architect exam"],
+      imageUrl: "/AWS.png",
+    },
+    {
       title: "VEX World Championship - Science Division (2x)",
       institution: "VEX Robotics",
       date: "2022, 2023 • Dallas, TX",
@@ -30,7 +37,7 @@ export default function Honors() {
     {
       title: "VEX Robotics State Championship (3x)",
       institution: "VEX Robotics",
-      date: "2019, 2022, 2023 • San Diego, CA | Los Angeles, CA",
+      date: "2019, 2022, 2023 • San Diego and LA",
       description: ["Qualified for the VEX Robotics State Championship in 2019, 2022, and 2023", "Won as state finalists at San Diego (2022) and Los Angeles (2023) and qualified for the World Championship"],
       imageUrl: "/VEXRobotics.jpeg",
     },
@@ -40,13 +47,6 @@ export default function Honors() {
       date: "2020",
       description: ["Received the school STEAM award for excellence in its fields"],
       imageUrl: "/CalabasasHS.jpeg",
-    },
-    {
-      title: "AWS Certified Solutions Architect",
-      institution: "Amazon Web Services",
-      date: "2019-22",
-      description: ["Passed the AWS Solutions Architect exam"],
-      imageUrl: "/AWS.png",
     },
   ];
 
