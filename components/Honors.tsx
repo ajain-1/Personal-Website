@@ -25,7 +25,7 @@ export default function Honors() {
       institution: "Lockheed Martin",
       date: "2023 • Los Angeles, CA",
       description: ["40k Scholarship from Lockheed Martin to study STEM"],
-      imageUrl: "/lockheed.jpeg",
+      imageUrl: "/lockheed.png",
     },
     {
       title: "VEX World Championship - Science Division (2x)",
