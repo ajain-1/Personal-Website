@@ -7,7 +7,7 @@ export default function Honors() {
       title: "High School Student",
       institution: "Calabasas High School",
       date: "2019-Present",
-      description: ["GPA: 4.58", "Activities: VEX Robotics Team (Captain), App Design Team (Lead Developer), Speech & Debate Team (Secretary), and more", "AP STEM: Calculus, Physics, Statistics, Chemistry, Biology", "CTE: Web Design, Investments"],
+      description: ["GPA: 4.6", "Activities: VEX Robotics Team (Captain), App Design Team (Lead Developer), Speech & Debate Team (Secretary), and more", "AP STEM: Calculus, Physics, Statistics, Chemistry, Biology", "CTE: Web Design, Investments"],
       imageUrl: "/CalabasasHS.jpeg",
     },
   ];
@@ -21,11 +21,11 @@ export default function Honors() {
       imageUrl: "/edison.jpeg",
     },
     {
-      title: "AWS Certified Solutions Architect",
-      institution: "Amazon Web Services",
-      date: "2019-22",
-      description: ["Passed the AWS Solutions Architect exam"],
-      imageUrl: "/AWS.png",
+      title: "Lockheed Martin 2023 Scholar",
+      institution: "Lockheed Martin",
+      date: "2023 • Los Angeles, CA",
+      description: ["40k Scholarship from Lockheed Martin to study STEM"],
+      imageUrl: "/lockheed.jpeg",
     },
     {
       title: "VEX World Championship - Science Division (2x)",
@@ -38,8 +38,15 @@ export default function Honors() {
       title: "VEX Robotics State Championship (3x)",
       institution: "VEX Robotics",
       date: "2019, 2022, 2023 • San Diego and LA",
-      description: ["Qualified for the VEX Robotics State Championship in 2019, 2022, and 2023", "Won as state finalists at San Diego (2022) and Los Angeles (2023) and qualified for the World Championship"],
+      description: ["Reached VEX Robotics State Championships in 2019, 2022, & 2023", "Won as state finalists at San Diego (2022) and Los Angeles (2023) and qualified for the World Championship"],
       imageUrl: "/VEXRobotics.jpeg",
+    },
+    {
+      title: "AWS Certified Solutions Architect",
+      institution: "Amazon Web Services",
+      date: "2019-22",
+      description: ["Passed the AWS Solutions Architect exam"],
+      imageUrl: "/AWS.png",
     },
     {
       title: "STEAM Award",
