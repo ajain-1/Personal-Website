@@ -17,14 +17,14 @@ export default function Honors() {
       title: "Southern California Edison 2023 Scholar",
       institution: "Edison International",
       date: "2023 • Los Angeles, CA",
-      description: ["50k Scholarship from Edison International to study STEM"],
+      description: ["Scholarship from Edison International to study STEM"],
       imageUrl: "/edison.jpeg",
     },
     {
       title: "Lockheed Martin 2023 Scholar",
       institution: "Lockheed Martin",
       date: "2023 • Los Angeles, CA",
-      description: ["40k Scholarship from Lockheed Martin to study STEM"],
+      description: ["Scholarship from Lockheed Martin to study STEM"],
       imageUrl: "/lockheed.png",
     },
     {
