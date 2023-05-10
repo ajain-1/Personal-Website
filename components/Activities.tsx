@@ -7,7 +7,7 @@ export default function Activities() {
       title: "Robotics Captain, Programmer, & Builder",
       institution: "VEX Robotics @ CHS",
       date: "2019-Present",
-      description: ["Apply and expand expertise in C++, embedded systems, robot design and development, and physics", "Demonstrate skills in leadership, collaboration, and communication", "Build a robot capable of competing and completing an objective", "Use vision, inertial, and tracking algorithms to train the robot for autonomous movement", "Compete against other robotics teams at a high level in local, state, and international competitions"],
+      description: ["Apply and expand expertise in C++, embedded systems, robot design and development, and physics", "Build a robot capable of competing and completing an objective", "Use vision, inertial, and tracking algorithms to train the robot for autonomous movement", "Compete against other robotics teams at a high level in local, state, and international competitions"],
       imageUrl: "/VEXRobotics.jpeg",
     },
     {
