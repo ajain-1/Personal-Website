@@ -8,9 +8,9 @@ import Head from "next/head";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <Head>
+      {/* <Head>
         <meta name="robots" content="noindex, nofollow" />
-      </Head>
+      </Head> */}
       {/* <NextSeo title="Aryan Jain - Calabasas High School" titleTemplate="Aryan Jain" defaultTitle="Aryan Jain - Calabasas High School" description="Passionate about AI, Robotics, and Entrepreneurship. Experienced in Cloud and Web Development. Always building something new." canonical="https://www.aryanj.tech/" /> */}
       <Component {...pageProps} />
     </ChakraProvider>
