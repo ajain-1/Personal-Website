@@ -60,11 +60,8 @@ export default function Honors() {
   return (
     <Box px={[5, 5, 10]} py={5}>
       <Heading fontSize={"2xl"} mb={5}>
-        Honors and Academics
-      </Heading>
-      <Text fontSize={"lg"} pt={2} mb={4} fontWeight={500}>
         Honors
-      </Text>
+      </Heading>
       <SimpleGrid columns={[1, 1, 2]} spacing={4}>
         {honors.map(({ title, institution, date, description, imageUrl }) => (
           <Box key={title} h="100%">
