@@ -14,19 +14,20 @@ export default function Honors() {
 
   const honors = [
     {
-      title: "Southern California Edison 2023 Scholar",
-      institution: "Edison International",
-      date: "2023 • Los Angeles, CA",
-      description: ["Scholarship from Edison International to study STEM"],
-      imageUrl: "/edison.jpeg",
-    },
-    {
       title: "Lockheed Martin 2023 Scholar",
       institution: "Lockheed Martin",
       date: "2023 • Los Angeles, CA",
       description: ["Scholarship from Lockheed Martin to study STEM"],
       imageUrl: "/lockheed.png",
     },
+    {
+      title: "Southern California Edison 2023 Scholar",
+      institution: "Edison International",
+      date: "2023 • Los Angeles, CA",
+      description: ["Scholarship from Edison International to study STEM"],
+      imageUrl: "/edison.jpeg",
+    },
+
     {
       title: "VEX World Championship - Science Division (2x)",
       institution: "VEX Robotics",

@@ -25,14 +25,14 @@ export default function Experience() {
       imageUrl: "/MartinBros.png",
     },
     {
-      title: "Fullstack Developer",
+      title: "Developer & Consultant",
       company: "Allay Tax",
       date: "2021",
       description: ["Designed and developed client website at allaytax.com", "Managed online presence including SEO and marketing", "Advised regarding improvements in systems, client experience, and engagement", "Resulted in 2x faster website and a more client-friendly design"],
       imageUrl: "/AllayTax.png",
     },
     {
-      title: "Cofounder",
+      title: "Co-Founder",
       company: "Hirezz",
       date: "2019-20",
       description: ["Co-founded social platform for discovering and hiring home contractors", "Developed initial MVP using Flutter and Firebase", "Pitched to angel investors and VCs", "Conducted early user surveys and iterated based on feedback", "Learnt invaluable lessons in building a startup in the future"],
