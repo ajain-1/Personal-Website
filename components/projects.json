@@ -71,7 +71,7 @@
     {
       "name": "Machina Labs (Toolset)",
       "year": "2022",
-      "description": ["Architected and developed cloud-based internal toolset for Machina Labs", "Machina Labs is innovating with robotic incremental forming", "Brought computational design and robot path planning scripts to the cloud", "Enabled generating robot paths and editing complex geometries in the web"],
+      "description": ["Machina Labs is innovating with robotic incremental forming", "Built cloud-based internal toolset for Machina Labs", "Brought computational design and robot path planning scripts to the cloud", "Enabled generating robot paths and editing complex geometries in the web"],
       "images": ["/projects/Software/MachinaLabs.png", "/projects/Software/ML.JPG", "/projects/Software/MachinaLogo.jpeg", "/projects/Software/GIF.png"],
       "imageDescriptions": ["Incremental Robotic Forming at Machina Labs at work!"],
       "links": ["", "", "https://www.machinalabs.ai", "https://dot.la/media-library/machina-labs-robots-molding-3d-metals.gif?id=29222911&width=980"]
