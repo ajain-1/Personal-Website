@@ -103,7 +103,7 @@
     },
     {
       "name": "FireFinder",
-      "year": "2019",
+      "year": "2021",
       "description": ["Created a smart fire detection system connected to AWS", "Used Arduino, ESP8266, and sensors to build a prototype", "Worked with AWS IoT, AWS Lambda, and other cloud services", "Presented project at a district tech conference and blogged weekly"],
       "images": ["/projects/Cloud/FireFinder.png", "/projects/Cloud/App.png", "/projects/Cloud/board.png"],
       "imageDescriptions": ["", "The app I designed to be able to view fire evacuation routes and manage emergency notifications.", "An early working version of the detector I made with some sensors and wiring I got from school and Amazon. I later made a 3D printed case for it."],
