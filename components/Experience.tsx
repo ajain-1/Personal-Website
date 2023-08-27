@@ -35,7 +35,7 @@ export default function Experience() {
       title: "Co-Founder",
       company: "Hirezz",
       date: "2019-20",
-      description: ["Co-founded social platform for discovering and hiring home contractors", "Developed initial MVP using Flutter and Firebase", "Pitched to angel investors and VCs", "Conducted early user surveys and iterated based on feedback", "Learnt invaluable lessons in building a startup in the future"],
+      description: ["Co-founded social platform for discovering and hiring home contractors", "Developed MVP using Flutter and Firebase", "Conducted user surveys and iterated based on feedback"],
       imageUrl: "/Hirezz.png",
     },
   ];
