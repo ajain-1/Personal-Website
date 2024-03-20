@@ -2,7 +2,7 @@ import { Button, Flex, Heading, Image, Box, Stack, Text, AspectRatio, Spacer } f
 
 export default function About() {
   return (
-    <Flex direction={{ base: "column", md: "row" }} bgColor="gray.100">
+    <Flex direction={{ base: "column", md: "row" }} bgColor="gray.100" py={10}>
       <Flex px={8} pt={[10, 10, 0]} align={"start"} justify={"center"} width={"100%"} direction="column">
         <Heading fontSize={{ base: "4xl", md: "4xl", lg: "5xl" }}>
           <Text as={"span"}>Aryan Jain</Text>
@@ -34,7 +34,7 @@ export default function About() {
           </a>
         </Stack>
       </Flex>
-      <Image src="/IMG_7517.png" alt="profile" borderRadius="15px" boxShadow={"dark-lg"} m={10} mr={[null, null, 10]} mx="auto" width={"250px"}></Image>
+      {/* <Image src="/IMG_7517.png" alt="profile" borderRadius="15px" boxShadow={"dark-lg"} m={10} mr={[null, null, 10]} mx="auto" width={"250px"}></Image> */}
     </Flex>
   );
 }
