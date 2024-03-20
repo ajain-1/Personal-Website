@@ -8,7 +8,7 @@ export default function About() {
           <Text as={"span"}>Aryan Jain</Text>
           <br />
           <Text bgClip={"text"} mt={3} fontSize="xl" color={"black"}>
-            Student & Software Developer | Carnegie Mellon SCS '27
+            Student & Software Developer | Carnegie Mellon SCS '26
           </Text>{" "}
         </Heading>
         <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"} my={4} maxW="550px">
