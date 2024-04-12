@@ -18,7 +18,7 @@ export default function Experience() {
       imageUrl: "/UTA.png",
     },
     {
-      title: "CAD Engineer",
+      title: "Computational Design",
       company: "Martin Bros",
       date: "2021",
       description: ["Worked with BIM and engineering teams to build construction models", "Utilized software such as Bluebeam, Revit, AutoCAD, and more", "Learned from industry experts in construction, engineering, and management", "Analyzed and interpreted architectural, structural, mechanical and other plans"],
