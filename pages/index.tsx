@@ -24,21 +24,22 @@ const Home: NextPage = () => {
       title: "About",
       icon: IoPersonOutline,
     },
+    // {
+    //   link: "experience",
+    //   title: "Experience",
+    //   icon: IoBriefcaseOutline,
+    // },
     {
-      link: "experience",
-      title: "Experience",
-      icon: IoBriefcaseOutline,
+      link: "projects",
+      title: "Projects",
+      icon: IoGridOutline,
     },
     {
       link: "academic",
       title: "Activities",
       icon: IoList,
     },
-    {
-      link: "projects",
-      title: "Projects",
-      icon: IoGridOutline,
-    },
+
 
     {
       link: "honors",
@@ -149,16 +150,16 @@ const Home: NextPage = () => {
         <div id="about">
           <About />
         </div>
-        <Box id="experience">
+        {/* <Box id="experience">
           <Experience></Experience>
+        </Box> */}
+
+<Box id="projects">
+          <Projects></Projects>
         </Box>
 
         <Box id="academic">
           <Activities></Activities>
-        </Box>
-
-        <Box id="projects">
-          <Projects></Projects>
         </Box>
 
         <Box id="honors">
