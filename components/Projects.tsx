@@ -33,7 +33,7 @@ export default function Projects() {
   return (
     <Box px={[5, 5, 10]} py={5}>
         <Heading fontSize={'2xl'} mb={5}>Projects</Heading>
-        <Text fontSize={'lg'} pt={0} mb={4} fontWeight={500}>Robotics</Text>
+        <Text fontSize={'lg'} pt={0} mb={4} fontWeight={500} id="robotics">Robotics</Text>
             <SimpleGrid columns={[1, 1, 2]} spacing={4}>
                 {projects.robotics.map(({ name, year, description, images, imageDescriptions }) => (
                     <Box key={name} h='100%'>
@@ -41,7 +41,7 @@ export default function Projects() {
                     </Box>
                 ))}
             </SimpleGrid>
-        <Text fontSize={'lg'} pt={5} mb={4} fontWeight={500}>Artificial Intelligence</Text>
+        <Text fontSize={'lg'} pt={5} mb={4} fontWeight={500} id="ai">Artificial Intelligence</Text>
         <SimpleGrid columns={[1, 1, 2]} spacing={4}>
                 {projects.ai.map(({ name, year, description, images, imageDescriptions }) => (
                     <Box key={name} h='100%'>
