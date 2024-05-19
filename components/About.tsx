@@ -32,6 +32,11 @@ export default function About() {
               Linkedin
             </Button>
           </a>
+          <a href="https://www.github.com/ShadeAJ1">
+            <Button borderRadius={"10px"} bgColor="black" color={"white"} width="100%" _hover={{ bgColor: "white", color: "black" }}>
+              Github
+            </Button>
+          </a>
         </Stack>
       </Flex>
       {/* <Image src="/IMG_7517.png" alt="profile" borderRadius="15px" boxShadow={"dark-lg"} m={10} mr={[null, null, 10]} mx="auto" width={"250px"}></Image> */}

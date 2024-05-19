@@ -14,7 +14,7 @@ export default function Activities() {
       title: "AI4ALL Student",
       institution: "Carngie Mellon University",
       date: "2021",
-      description: ["Attended free program at CMU with a cohort of 25 students", "Worked with Carnegie Mellon AI faculty to explore AI", "Used tools such as Tensorflow, PyTorch, and OpenCV", "Gained valuable research experience from building AI models and working on projects with other students"],
+      description: ["Attended free program at CMU with a cohort of 25 students", "Worked with Carnegie Mellon AI faculty to explore AI", "Used tools such as Tensorflow, PyTorch, and Scikit-Learn", "Gained valuable research experience from building AI models and working on projects with other students"],
       imageUrl: "/CarnegieMellon.png",
     },
     {
@@ -41,7 +41,7 @@ export default function Activities() {
       title: "Founder and President",
       institution: "ByteClub",
       date: "2020-23",
-      description: ["Founded org to increase STEM involvement by teaching students CS", "Taught through working on projects such as apps, websites, & games", "Pair students across experience levels to run a peer-peer program", "Share resources with students to help them pursue CS further"],
+      description: ["Founded org to increase STEM involvement by teaching students CS", "Taught by working on projects such as apps, websites, & games", "Pair students across experience levels to run a peer-peer program", "Share resources with students to help them pursue CS further"],
       imageUrl: "/ByteClub.png",
     },
   ];

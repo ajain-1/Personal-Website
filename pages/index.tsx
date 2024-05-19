@@ -91,7 +91,7 @@ const Home: NextPage = () => {
           ))}
         </VStack>
         <Spacer />
-        <a href="mailto:ajain.mss@gmail.com">
+        <a href="mailto:aryanj@andrew.cmu.edu">
           <Button bgColor={"white"} color="black" w="100%" _hover={{ bgColor: "gray.600", color: "white" }}>
             Contact
           </Button>
