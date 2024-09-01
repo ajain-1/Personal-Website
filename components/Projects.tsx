@@ -30,7 +30,7 @@ export default function Projects() {
           </Box>
         ))}
       </SimpleGrid>
-      <Text fontSize={"lg"} pt={5} mb={4} fontWeight={500} id="software">
+      {/* <Text fontSize={"lg"} pt={5} mb={4} fontWeight={500} id="software">
         Software Development
       </Text>
       <SimpleGrid columns={[1, 1, 2]} spacing={4}>
@@ -39,7 +39,7 @@ export default function Projects() {
             <Project name={name} year={year} description={description} images={images} idesc={imageDescriptions} links={links}></Project>
           </Box>
         ))}
-      </SimpleGrid>
+      </SimpleGrid> */}
       <Text fontSize={"lg"} pt={5} mb={4} fontWeight={500} id="more">
         More
       </Text>
@@ -69,10 +69,10 @@ function Project(props: { name: string; year: string; description: Array<String>
   }
 
   return (
-    <Box minH={"260px"} w={"full"} bgColor="gray.900" borderRadius="10px" p={6} h="full">
+    <Box minH={"260px"} w={"full"} bgColor="gray.50" border="1px" p={6} h="full">
       <Stack spacing={4} direction="column">
         <Stack direction={"row"} spacing={0}>
-          <Text fontWeight={600} fontSize="lg" textColor="white">
+          <Text fontWeight={600} fontSize="lg" textColor="black">
             {name}
           </Text>
           <Spacer />
@@ -81,22 +81,22 @@ function Project(props: { name: string; year: string; description: Array<String>
               {year}
             </Badge>
           ) : null} */}
-          {/* <Text bgColor={'gray.900'} textColor='white' borderRadius='10px' px='2' py={1}>{year}</Text> */}
+          {/* <Text bgColor={'gray.900'} textColor='white' borderRadius='0px' px='2' py={1}>{year}</Text> */}
         </Stack>
         <UnorderedList px={3}>
           {description.map((desc?: any) => (
-            <ListItem key={desc} fontSize={["0.75em", "0.8em", "0.8em"]} textColor="white">
+            <ListItem key={desc} fontSize={["0.75em", "0.8em", "0.8em"]} textColor="black">
               {desc}
             </ListItem>
           ))}
         </UnorderedList>
-        {images.length > 1 ? (
+        {images.length >= 1 ? (
           <Flex flexDirection={"row"} className={"container"} overflowX="scroll">
             {images.map((imageUrl: any) => (
               <Flex key={imageUrl} mr={3} minW="70px" minH={"70px"} border="5px" borderColor={"white"}>
                 <IMG
                   src={imageUrl}
-                  style={{ borderRadius: "10px" }}
+                  style={{ borderRadius: "0px" }}
                   objectFit="cover"
                   width="70px"
                   height="70px"
@@ -116,7 +116,7 @@ function Project(props: { name: string; year: string; description: Array<String>
       </Stack>
       <Modal isOpen={isOpen} onClose={onClose} allowPinchZoom={true} size="2xl" isCentered={true} motionPreset="slideInBottom">
         <ModalOverlay />
-        <ModalContent borderRadius={"10px"} bgClip={"content-box"} flexShrink={1}>
+        <ModalContent borderRadius='0px' bgClip={"content-box"} flexShrink={1}>
           <Box pt={5}>
             {/* <IMG quality={50} src={image.src} alt='project image' width='1000px' height='500px' priority objectFit='contain'></IMG>
              */}

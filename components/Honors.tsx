@@ -85,7 +85,7 @@ export default function Honors() {
 export function Card(props: { date: string; title: string; institution: string; description: Array<String>; imageUrl: string }) {
   const { title, institution, description, imageUrl } = props;
   return (
-    <Box w={"full"} bgColor="gray.900" borderRadius="10px" p={6} h="full">
+    <Box w={"full"} bgColor="gray.900" borderRadius='0px' p={6} h="full">
       <Stack spacing={5}>
         <Stack direction={"row"} spacing={4} align={"center"}>
           <Avatar src={imageUrl} />

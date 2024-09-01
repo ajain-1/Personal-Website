@@ -68,7 +68,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/icon.png"></link>
       </Head>
 
-      <Flex w={"20vw"} flexDir="column" dir="column" maxH="100vh" bgColor={"#111"} p="5" pt={8} color={"white"} display={["none", "none", "inherit"]}>
+      <Flex w={"20vw"} flexDir="column" dir="column" maxH="100vh" bgColor={"white"} borderRight={'1px'} p="5" pt={8} color={"black"} display={["none", "none", "inherit"]}>
         {/* <Heading fontSize={'3xl'} ml={4} mb="7" fontWeight={'900'}>Aryan Jain</Heading> */}
         <VStack spacing={3}>
           {links.map(({ link, title, icon }) => (
@@ -78,7 +78,7 @@ const Home: NextPage = () => {
               w="full"
               h="50px"
               _hover={{ backgroundColor: "white", color: "black" }}
-              borderRadius="10px"
+              borderRadius="0px"
               align={"center"}
               onClick={() => {
                 scrollIntoView(link);
@@ -90,12 +90,44 @@ const Home: NextPage = () => {
             </Flex>
           ))}
         </VStack>
+        
         <Spacer />
-        <a href="mailto:aryanj@andrew.cmu.edu">
-          <Button bgColor={"gray.800"} color="white" w="100%" _hover={{ bgColor: "gray.600", color: "white" }}>
-            Contact
-          </Button>
-        </a>
+        <VStack spacing={4} width={'100%'} align={'left'}>
+
+          <a href="https://www.linkedin.com/in/aryanjain1/">
+            <Button borderRadius='0px' width="100%" border='1px'
+              color="black"
+              bgColor={'white'}
+              _hover={{
+                bg: "gray.300"
+              }}>
+              Linkedin
+            </Button>
+          </a>
+          <a href="https://www.github.com/ajain-1">
+            <Button borderRadius='0px' width='100%' border='1px'
+              color="black"
+              bgColor={'white'}
+              _hover={{
+                bg: "gray.300"
+              }}>
+              Github
+            </Button>
+          </a>
+          <a href="mailto:aryanj@andrew.cmu.edu?body=%0D%0A%0D%0A">
+            <Button
+              width={"100%"}
+              borderRadius='0px'
+              border='1px'
+              bgColor={'white'}
+              color="black"
+              _hover={{
+                bg: "gray.300"
+              }}>
+              Contact
+            </Button>
+          </a>
+        </VStack>
       </Flex>
 
       <Flex flex={1} h="100vh" bgColor="F1ECCE" flexDir={"column"} overflowY="scroll" overflowX={"hidden"}>
@@ -115,7 +147,7 @@ const Home: NextPage = () => {
             </Center>
 
             {menu ? (
-              <Flex w={"70vw"} zIndex={1} position="absolute" top={0} left={0} flexDir="column" h="100vh" bgColor={"#111"} p="5" pt={8} color={"white"}>
+              <Flex w={"70vw"} zIndex={1} position="absolute" top={0} left={0} flexDir="column" h="100vh" bgColor={"white"} p="5" pt={8} color={"white"}>
                 {/* <Heading fontSize={'3xl'} ml={4} mb="7" fontWeight={'900'}>Aryan Jain</Heading> */}
                 <VStack spacing={3}>
                   {links.map(({ link, title, icon }) => (
@@ -124,7 +156,7 @@ const Home: NextPage = () => {
                       w="full"
                       h="50px"
                       _hover={{ backgroundColor: "white", color: "black" }}
-                      borderRadius="10px"
+                      borderRadius="0px"
                       align={"center"}
                       onClick={() => {
                         setMenu(!menu);
@@ -138,11 +170,42 @@ const Home: NextPage = () => {
                   ))}
                 </VStack>
                 <Spacer />
-                <a href="mailto:ajain.mss@gmail.com">
-                  <Button bgColor={"white"} color="black" w="100%" _hover={{ bgColor: "gray.600", color: "white" }}>
-                    Contact
-                  </Button>
-                </a>
+                <VStack spacing={4} width={'100%'} align={'left'}>
+
+          <a href="https://www.linkedin.com/in/aryanjain1/">
+            <Button borderRadius='0px' width="100%" border='1px'
+              color="black"
+              bgColor={'white'}
+              _hover={{
+                bg: "gray.300"
+              }}>
+              Linkedin
+            </Button>
+          </a>
+          <a href="https://www.github.com/ajain-1">
+            <Button borderRadius='0px' width='100%' border='1px'
+              color="black"
+              bgColor={'white'}
+              _hover={{
+                bg: "gray.300"
+              }}>
+              Github
+            </Button>
+          </a>
+          <a href="mailto:aryanj@andrew.cmu.edu?body=%0D%0A%0D%0A">
+            <Button
+              width={"100%"}
+              borderRadius='0px'
+              border='1px'
+              bgColor={'white'}
+              color="black"
+              _hover={{
+                bg: "gray.300"
+              }}>
+              Contact
+            </Button>
+          </a>
+        </VStack>
               </Flex>
             ) : null}
           </Flex>
@@ -154,7 +217,7 @@ const Home: NextPage = () => {
           <Experience></Experience>
         </Box> */}
 
-<Box id="projects" backgroundColor={'black'} textColor="gray.100">
+<Box id="projects"textColor="gray.900">
           <Projects></Projects>
         </Box>
 {/* 
@@ -166,7 +229,7 @@ const Home: NextPage = () => {
           <Honors></Honors>
         </Box> */}
 
-        <Box id="hobbies" backgroundColor={'black'} textColor="gray.100">
+        <Box id="hobbies" textColor="gray.900">
           <Hobbies></Hobbies>
         </Box>
       </Flex>
