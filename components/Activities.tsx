@@ -24,24 +24,11 @@ export default function Activities() {
       description: ["Worked with graduate students to learn more about AI", "Built projects using Python and Google ML tools under experts", "Explored fundamental AI concepts such as regression and NNs", "Applied AI to use cases in healthcare, self-driving, and more", "Worked as an ambassador to teach AI concepts to other students"],
       imageUrl: "/InspiritAI.jpeg",
     },
-    // {
-    //     title: 'High School Student',
-    //     institution: 'Calabasas High School',
-    //     date: '2019-Present',
-    //     description:
-    //     ['GPA: 4.58',
-    //     'Activities: VEX Robotics Team (Captain), App Design Team (Lead Developer), Speech & Debate Team (Secretary), and more',
-    //     'AP STEM: Calculus, Physics, Statistics, Chemistry, Biology',
-    //     'CTE: Web Design, Investments',
-
-    //     ],
-    //     imageUrl: '/CalabasasHS.jpeg',
-    // },
     {
       title: "Founder and President",
       institution: "ByteClub",
       date: "2020-23",
-      description: ["Founded org to increase STEM involvement by teaching students CS", "Taught by working on projects such as apps, websites, & games", "Pair students across experience levels to run a peer-peer program", "Share resources with students to help them pursue CS further"],
+      description: ["Founded org to increase STEM involvement & teach students CS", "Taught by working on projects such as apps, websites, & games", "Pair students across experience levels to run a peer-peer program", "Share resources with students to help them pursue CS further"],
       imageUrl: "/ByteClub.png",
     },
   ];
@@ -65,7 +52,7 @@ export default function Activities() {
 export function Card(props: { date: string; title: string; institution: string; description: Array<String>; imageUrl: string }) {
   const { title, institution, description, imageUrl } = props;
   return (
-    <Box w={"full"} bgColor="gray.100" borderRadius="10px" p={6} h="full">
+    <Box w={"full"} bgColor="gray.900" borderRadius="10px" p={6} h="full">
       <Stack spacing={5}>
         <Stack direction={"row"} spacing={4} align={"center"}>
           <Avatar src={imageUrl} />
@@ -73,18 +60,18 @@ export function Card(props: { date: string; title: string; institution: string; 
             <Text fontWeight={600} fontSize="lg">
               {title}
             </Text>
-            <Text color={"gray.700"} fontWeight={600} mt={"5"}>
-              {institution} • {props.date}
+            <Text color={"gray.100"} fontWeight={600} mt={"5"}>
+              {institution}
             </Text>
           </Stack>
         </Stack>
-        <UnorderedList px={3}>
+        {/* <UnorderedList px={3}>
           {description.map((desc: any) => (
             <ListItem key={desc} fontSize="0.9em">
               {desc}
             </ListItem>
           ))}
-        </UnorderedList>
+        </UnorderedList> */}
       </Stack>
     </Box>
   );

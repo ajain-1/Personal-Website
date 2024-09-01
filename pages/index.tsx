@@ -34,18 +34,18 @@ const Home: NextPage = () => {
       title: "Projects",
       icon: IoGridOutline,
     },
-    {
-      link: "academic",
-      title: "Activities",
-      icon: IoList,
-    },
+    // {
+    //   link: "academic",
+    //   title: "Activities",
+    //   icon: IoList,
+    // },
 
 
-    {
-      link: "honors",
-      title: "Honors & Academics",
-      icon: IoStarOutline,
-    },
+    // {
+    //   link: "honors",
+    //   title: "Honors",
+    //   icon: IoStarOutline,
+    // },
 
     {
       link: "hobbies",
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/icon.png"></link>
       </Head>
 
-      <Flex w={"20vw"} flexDir="column" dir="column" maxH="100vh" bgColor={"#1b2432"} p="5" pt={8} color={"white"} display={["none", "none", "inherit"]}>
+      <Flex w={"20vw"} flexDir="column" dir="column" maxH="100vh" bgColor={"#111"} p="5" pt={8} color={"white"} display={["none", "none", "inherit"]}>
         {/* <Heading fontSize={'3xl'} ml={4} mb="7" fontWeight={'900'}>Aryan Jain</Heading> */}
         <VStack spacing={3}>
           {links.map(({ link, title, icon }) => (
@@ -92,7 +92,7 @@ const Home: NextPage = () => {
         </VStack>
         <Spacer />
         <a href="mailto:aryanj@andrew.cmu.edu">
-          <Button bgColor={"white"} color="black" w="100%" _hover={{ bgColor: "gray.600", color: "white" }}>
+          <Button bgColor={"gray.800"} color="white" w="100%" _hover={{ bgColor: "gray.600", color: "white" }}>
             Contact
           </Button>
         </a>
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
             </Center>
 
             {menu ? (
-              <Flex w={"70vw"} zIndex={1} position="absolute" top={0} left={0} flexDir="column" h="100vh" bgColor={"#1b2432"} p="5" pt={8} color={"white"}>
+              <Flex w={"70vw"} zIndex={1} position="absolute" top={0} left={0} flexDir="column" h="100vh" bgColor={"#111"} p="5" pt={8} color={"white"}>
                 {/* <Heading fontSize={'3xl'} ml={4} mb="7" fontWeight={'900'}>Aryan Jain</Heading> */}
                 <VStack spacing={3}>
                   {links.map(({ link, title, icon }) => (
@@ -154,19 +154,19 @@ const Home: NextPage = () => {
           <Experience></Experience>
         </Box> */}
 
-<Box id="projects">
+<Box id="projects" backgroundColor={'black'} textColor="gray.100">
           <Projects></Projects>
         </Box>
-
-        <Box id="academic">
+{/* 
+        <Box id="academic" backgroundColor={'black'} textColor="gray.100">
           <Activities></Activities>
         </Box>
 
-        <Box id="honors">
+        <Box id="honors" backgroundColor={'black'} textColor="gray.100">
           <Honors></Honors>
-        </Box>
+        </Box> */}
 
-        <Box id="hobbies">
+        <Box id="hobbies" backgroundColor={'black'} textColor="gray.100">
           <Hobbies></Hobbies>
         </Box>
       </Flex>

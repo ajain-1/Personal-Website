@@ -6,7 +6,7 @@ import { ChakraNextImage } from "./ChakraImg";
 
 export default function Projects() {
   return (
-    <Box px={[5, 5, 10]} py={5}>
+  <Box px={[5, 5, 10]} py={5}>
       <Heading fontSize={"2xl"} mb={5}>
         Projects
       </Heading>
@@ -41,7 +41,7 @@ export default function Projects() {
         ))}
       </SimpleGrid>
       <Text fontSize={"lg"} pt={5} mb={4} fontWeight={500} id="more">
-        Cloud Development and More
+        More
       </Text>
       <SimpleGrid columns={[1, 1, 2]} spacing={4}>
         {projects.cloud.map(({ name, year, description, images, imageDescriptions, links }) => (
@@ -69,23 +69,23 @@ function Project(props: { name: string; year: string; description: Array<String>
   }
 
   return (
-    <Box minH={"260px"} w={"full"} bgColor="gray.100" borderRadius="10px" p={6} h="full">
+    <Box minH={"260px"} w={"full"} bgColor="gray.900" borderRadius="10px" p={6} h="full">
       <Stack spacing={4} direction="column">
         <Stack direction={"row"} spacing={0}>
-          <Text fontWeight={600} fontSize="lg">
+          <Text fontWeight={600} fontSize="lg" textColor="white">
             {name}
           </Text>
           <Spacer />
-          {year ? (
+          {/* {year ? (
             <Badge variant={"solid"} maxH="20px">
               {year}
             </Badge>
-          ) : null}
+          ) : null} */}
           {/* <Text bgColor={'gray.900'} textColor='white' borderRadius='10px' px='2' py={1}>{year}</Text> */}
         </Stack>
         <UnorderedList px={3}>
           {description.map((desc?: any) => (
-            <ListItem key={desc} fontSize={["0.75em", "0.8em", "0.8em"]}>
+            <ListItem key={desc} fontSize={["0.75em", "0.8em", "0.8em"]} textColor="white">
               {desc}
             </ListItem>
           ))}
@@ -93,10 +93,10 @@ function Project(props: { name: string; year: string; description: Array<String>
         {images.length > 1 ? (
           <Flex flexDirection={"row"} className={"container"} overflowX="scroll">
             {images.map((imageUrl: any) => (
-              <Flex key={imageUrl} mr={3} minW="70px" minH={"70px"}>
+              <Flex key={imageUrl} mr={3} minW="70px" minH={"70px"} border="5px" borderColor={"white"}>
                 <IMG
                   src={imageUrl}
-                  style={{ borderRadius: "20px" }}
+                  style={{ borderRadius: "10px" }}
                   objectFit="cover"
                   width="70px"
                   height="70px"

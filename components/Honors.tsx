@@ -29,7 +29,7 @@ export default function Honors() {
     },
 
     {
-      title: "VEX World Championship - Science Division (2x)",
+      title: "VEX World Championship - Science Div. (2x)",
       institution: "VEX Robotics",
       date: "2022, 2023 • Dallas, TX",
       description: ["Led team to VEX RC World Tournament as captain and programmer", "One of the top teams in division out of over 11,000 teams worldwide"],
@@ -39,21 +39,21 @@ export default function Honors() {
       title: "VEX Robotics State Championship (3x)",
       institution: "VEX Robotics",
       date: "2019, 2022, 2023 • San Diego and LA",
-      description: ["Reached VEX Robotics State Championships in 2019, 2022, & 2023", "Won as state finalists at San Diego (2022) and Los Angeles (2023) and qualified for the World Championship"],
+      description: ["Reached VEX Robotics State Championships in 2019, 2022, 2023", "Won as state finalists at San Diego (2022) and Los Angeles (2023) and qualified for the World Championship"],
       imageUrl: "/VEXRobotics.jpeg",
     },
     {
       title: "AWS Certified Solutions Architect",
       institution: "Amazon Web Services",
       date: "2019-22",
-      description: ["Passed the AWS Solutions Architect exam"],
+      // description: ["Passed the AWS Solutions Architect exam"],
       imageUrl: "/AWS.png",
     },
     {
       title: "STEAM Award",
       institution: "CHS",
       date: "2020",
-      description: ["Received the school STEAM award for excellence in its fields"],
+      // description: ["Received the school STEAM award for excellence in its fields"],
       imageUrl: "/CalabasasHS.jpeg",
     },
   ];
@@ -85,7 +85,7 @@ export default function Honors() {
 export function Card(props: { date: string; title: string; institution: string; description: Array<String>; imageUrl: string }) {
   const { title, institution, description, imageUrl } = props;
   return (
-    <Box w={"full"} bgColor="gray.100" borderRadius="10px" p={6} h="full">
+    <Box w={"full"} bgColor="gray.900" borderRadius="10px" p={6} h="full">
       <Stack spacing={5}>
         <Stack direction={"row"} spacing={4} align={"center"}>
           <Avatar src={imageUrl} />
@@ -93,18 +93,11 @@ export function Card(props: { date: string; title: string; institution: string; 
             <Text fontWeight={600} fontSize="lg">
               {title}
             </Text>
-            <Text color={"gray.700"} fontWeight={600} mt={"5"}>
+            <Text color={"gray.100"} fontWeight={600} mt={"5"}>
               {institution} • {props.date}
             </Text>
           </Stack>
         </Stack>
-        <UnorderedList px={3}>
-          {description.map((desc: any) => (
-            <ListItem key={desc} fontSize="0.9em">
-              {desc}
-            </ListItem>
-          ))}
-        </UnorderedList>
       </Stack>
     </Box>
   );

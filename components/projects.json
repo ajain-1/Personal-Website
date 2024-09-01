@@ -4,14 +4,14 @@
       "name": "VEX Robotics - Spin Up",
       "year": "2023",
       "description": ["Designed, built, and programmed two robots throughout the year", "Led team to VEX State and World Championships as captain", "Used Flywheel and Catapult robot designs to score discs", "Trained the robot for autonomous movement using sensor inputs"],
-      "images": ["/projects/Robotics/SpinUp/worlds.heic", "/projects/Robotics/SpinUp/both.HEIC", "/projects/Robotics/SpinUp/scata.HEIC", "/projects/Robotics/SpinUp/scata2.HEIC", "/projects/Robotics/SpinUp/flywheel1.JPG", "/projects/Robotics/SpinUp/flywheel2.HEIC"],
+      "images": ["/projects/Robotics/SpinUp/both.jpg", "/projects/Robotics/SpinUp/scata.jpg", "/projects/Robotics/SpinUp/scata2.jpg", "/projects/Robotics/SpinUp/flywheel1.JPG", "/projects/Robotics/SpinUp/flywheel2.jpg"],
       "imageDescriptions": []
     },
     {
       "name": "VEX Robotics - Tipping Point",
       "year": "2022",
       "description": ["Designed, built, and programmed three robots throughout the year", "Led team to VEX State and World Championships as captain", "Applied core robot design principles and programming techniques", "Trained the robot for autonomous movement using sensor inputs"],
-      "images": ["/projects/Robotics/VEXWorlds.jpeg", "/projects/Robotics/IMG_8869.HEIC", "/projects/Robotics/IMG_8866.HEIC", "/projects/Robotics/IMG_8862.HEIC", "/projects/Robotics/IMG_8813.HEIC", "/projects/Robotics/IMG_8816.HEIC", "/projects/Robotics/IMG_8893.HEIC"],
+      "images": ["/projects/Robotics/IMG_8869.HEIC", "/projects/Robotics/IMG_8866.HEIC", "/projects/Robotics/IMG_8862.HEIC", "/projects/Robotics/IMG_8813.HEIC", "/projects/Robotics/IMG_8816.HEIC", "/projects/Robotics/IMG_8893.HEIC"],
       "imageDescriptions": [
         "We were part of the science division at the VEX World Championship.",
         "I designed, built, and programmed this robot during spring of 2022 (this was the final iteration).",
@@ -72,21 +72,14 @@
       "name": "Machina Labs (Toolset)",
       "year": "2022",
       "description": ["Machina Labs is innovating with robotic incremental forming", "Built cloud-based internal toolset for Machina Labs", "Brought computational design and robot path planning scripts to the cloud", "Enabled generating robot paths and editing complex geometries in the web"],
-      "images": ["/projects/Software/MachinaLabs.png", "/projects/Software/ML.JPG", "/projects/Software/MachinaLogo.jpeg", "/projects/Software/GIF.png"],
+      "images": ["/projects/Software/MachinaLabs.png", "/projects/Software/MachinaLogo.jpeg", "/projects/Software/GIF.png"],
       "imageDescriptions": ["Incremental Robotic Forming at Machina Labs at work!"],
-      "links": ["", "", "https://www.machinalabs.ai", "https://dot.la/media-library/machina-labs-robots-molding-3d-metals.gif?id=29222911&width=980"]
-    },
-    {
-      "name": "Hirezz (Mobile App)",
-      "year": "2020",
-      "description": ["Developed MVP for company I cofounded, Hirezz", "Designed with Figma and developed with Flutter and Firebase", "A social networking app to discover and hire home contractors", "Learned how to make an idea into a product"],
-      "images": ["/projects/Software/Chat.png", "/projects/Software/Home.png", "/projects/Software/Search.png", "/projects/Software/Logo.png"],
-      "imageDescriptions": ["Some of the code (using Flutter) for the chat screen alongside the app running on an IOS emulator.", "The home screen of the app I designed and developed.", "Search screen (we used Algolia search)."]
+      "links": ["", "https://www.machinalabs.ai", "https://dot.la/media-library/machina-labs-robots-molding-3d-metals.gif?id=29222911&width=980"]
     },
     {
       "name": "Allay Tax (Website)",
       "year": "2020",
-      "description": ["Designed and developed website for tax resolution firm (allaytax.com)", "Optimized website for search engines, performance in key metrics, and UX", "Resulted in a 2x faster website by using a CDN and caching", "Implemented a CMS for the website to allow for easy updates"],
+      "description": ["Designed and developed website for tax resolution firm (allaytax.com)", "Optimized website for search engines, performance in key metrics, & UX", "Resulted in a 2x faster website by using a CDN and caching", "Implemented a CMS for the website to allow for easy updates"],
       "images": ["/AllayTax.png", "/projects/Software/AllayHome.png", "/projects/Software/AllayBlog.png", "/projects/Software/About.png", "/projects/Software/Cache.png"],
       "imageDescriptions": ["", "Home page of the website. The focus was on improving user conversion rate, so the contact form was a central part of the page.", "A CMS was implemented so that blog posts about tax issues can easily be written and updated.", "Some info about the company and the services they provide.", "Implemented Cloudflare CDN along with caching to speed up the website performance."],
       "links": ["https://www.allaytax.com", "", "", ""]
@@ -96,7 +89,7 @@
     {
       "name": "BIM and 3D Design at Martin Bros",
       "year": "2021",
-      "description": ["Modeled Floor 42 Unit 2 of The Grand in LA using Revit", "Designed and modeled an electric scooter and bike curbside stand", "Used software such as AutoCAD, Revit, and Bluebeam", "Presented and detailed project to senior Martin Bros engineers and leaders"],
+      "description": ["Modeled Floor 42 Unit 2 of The Grand in LA using Revit", "Designed and modeled an electric scooter and bike curbside stand", "Used software such as AutoCAD, Revit, and Bluebeam", "Presented and detailed project to senior Martin Bros engineers & leaders"],
       "images": ["/projects/Cloud/MartinBros.png", "/projects/Cloud/Grand.png", "/projects/Cloud/Stand.png"],
       "imageDescriptions": ["", "I designed Floor 42 Unit 2 of The Grand using Autodesk Revit and other BIM tools.", "Has features like a vending machine, water refill station, and a modern design."],
       "links": ["https://docs.google.com/presentation/d/1QFeQDjh0_LZKQ9U9a7Q7J7a6YjmAHs75XjT80YTTypc/edit?usp=sharing"]
