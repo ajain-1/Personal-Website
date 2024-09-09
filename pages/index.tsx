@@ -93,7 +93,16 @@ const Home: NextPage = () => {
         
         <Spacer />
         <VStack spacing={4} width={'100%'} align={'left'}>
-
+        <a href="https://www.x.com/ajain404">
+            <Button borderRadius='0px' width="100%" border='1px'
+              color="black"
+              bgColor={'white'}
+              _hover={{
+                bg: "gray.300"
+              }}>
+              Twitter
+            </Button>
+          </a>
           <a href="https://www.linkedin.com/in/aryanjain1/">
             <Button borderRadius='0px' width="100%" border='1px'
               color="black"
@@ -162,8 +171,8 @@ const Home: NextPage = () => {
                         setMenu(!menu);
                         scrollIntoView(link);
                       }}>
-                      <Icon as={icon} mx="4" boxSize={"1.5em"}></Icon>
-                      <Text fontSize="lg" fontWeight={"600"}>
+                      <Icon as={icon} mx="4" boxSize={"1.5em"} color="black"></Icon>
+                      <Text fontSize="lg" fontWeight={"600"} color={"black"}>
                         {title}
                       </Text>
                     </Flex>
@@ -171,7 +180,16 @@ const Home: NextPage = () => {
                 </VStack>
                 <Spacer />
                 <VStack spacing={4} width={'100%'} align={'left'}>
-
+                <a href="https://www.x.com/ajain404">
+            <Button borderRadius='0px' width="100%" border='1px'
+              color="black"
+              bgColor={'white'}
+              _hover={{
+                bg: "gray.300"
+              }}>
+              Twitter
+            </Button>
+          </a>
           <a href="https://www.linkedin.com/in/aryanjain1/">
             <Button borderRadius='0px' width="100%" border='1px'
               color="black"

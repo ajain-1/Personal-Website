@@ -62,9 +62,9 @@
     {
       "name": "Other AI Projects",
       "year": "",
-      "description": ["Made an reinforcement learning model to play blackjack against. Used an Epsilon-Greedy learning approach.", "Aligning 3d models to scans with Bayesian Optimization at Machina Labs", "ML and sensor fusion models at Hadrian", "Many smaller labs and projects at Inspirit AI and AI4ALL @ CMU"],
-      "images": [""],
-      "imageDescriptions": [""]
+      "description": ["Made a fun reinforcement learning model to play blackjack against", "Aligning 3d models to scans with Bayesian Optimization at Machina Labs", "ML and sensor fusion models at Hadrian", "Built RAG pipeline as founding engineer at Compos Mentis", "Many smaller labs and projects at Inspirit AI and AI4ALL at CMU"],
+      "images": [],
+      "imageDescriptions": []
     }
   ],
   "software": [
