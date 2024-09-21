@@ -41,10 +41,10 @@
     {
       "name": "Object Detection and Bounding (CNN)",
       "year": "2021",
-      "description": ["Created an AI model to detect common road objects in a given scene", "Could be applied in autonomous driving and other areas", "Presented research project to students and graduates in Inspirit AI", "Used 3 CNN approaches: Perceptron, Sliding Windows, and YOLO"],
+      "description": ["Created an AI model to detect common road objects in a given scene", "Could be applied in autonomous driving and other areas", "Presented research project to students and graduates at CMU", "Used 3 CNN approaches: Perceptron, Sliding Windows, and YOLO"],
       "images": ["/projects/AI/CoverSlide.png", "/projects/AI/SlidingWindows.png", "/projects/AI/CNNSliding.png", "/projects/AI/VGGNN.png", "/projects/AI/YOLO.png", "/projects/AI/YOLOResult.png"],
       "imageDescriptions": [
-        "We presented to over a hundred students in Inspirit AI. Others had interesting projects they chose to research such as in sentiment analysis, fake news detection, and justice.",
+        "We presented to over a hundred students. Others had interesting projects they chose to research such as in sentiment analysis, fake news detection, and justice.",
         "Our second approach (after using a Perceptron) was to use sliding windows to run our model on smaller parts of an image in hopes of increasing accuracy.",
         "Initially, a basic CNN model inputted with individual windows produced just an 82 percent accuracy, so we decided to change our approach.",
         "We used an image classification model called VGG NN to better classify objects and achieved a 95% accuracy.",
