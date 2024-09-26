@@ -41,11 +41,11 @@ const Home: NextPage = () => {
     // },
 
 
-    // {
-    //   link: "honors",
-    //   title: "Honors",
-    //   icon: IoStarOutline,
-    // },
+    {
+      link: "honors",
+      title: "Honors",
+      icon: IoStarOutline,
+    },
 
     {
       link: "hobbies",
@@ -133,7 +133,7 @@ const Home: NextPage = () => {
               _hover={{
                 bg: "gray.300"
               }}>
-              Contact
+              Email
             </Button>
           </a>
         </VStack>
@@ -220,7 +220,7 @@ const Home: NextPage = () => {
               _hover={{
                 bg: "gray.300"
               }}>
-              Contact
+              Email
             </Button>
           </a>
         </VStack>
@@ -243,9 +243,11 @@ const Home: NextPage = () => {
           <Activities></Activities>
         </Box>
 
-        <Box id="honors" backgroundColor={'black'} textColor="gray.100">
+         */}
+
+<Box id="honors" textColor="gray.900">
           <Honors></Honors>
-        </Box> */}
+        </Box>
 
         <Box id="hobbies" textColor="gray.900">
           <Hobbies></Hobbies>

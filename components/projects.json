@@ -15,8 +15,7 @@
       "imageDescriptions": [
         "We were part of the science division at the VEX World Championship.",
         "I designed, built, and programmed this robot during spring of 2022 (this was the final iteration).",
-        "I added systems like pneumatic pistons (at about 100psi) and 8 DC Motors to perform tasks. Also uses inertial sensors and other sensors (added after this picture) like optical sensors, distance sensors, and GPS sensors to navigate the field. ",
-        "Operates on a 6 motor drivebase and reaches speeds of 280rpm on 4 inch wheels. Uses center traction wheels to climb up platforms and omnidirectional wheels to increase manueverability.",
+        "I added systems like pneumatic pistons (at about 100psi) and 8 DC Motors to perform tasks. Also uses inertial sensors and other sensors (added after this picture) like optical sensors, distance sensors, and GPS sensors to navigate the field. The robot operates on a 6 motor drivebase and reaches speeds of 280rpm on 4 inch wheels. Uses center traction wheels to climb up platforms and omnidirectional wheels to increase manueverability.",
         "Qualified for Worlds by winning as State Finalists in at the San Diego VEX Robotics State Championship.",
         "The robot has enough traction and power to balance itself (weighs around 20lbs) and around 15lbs of weighted goal posts onto the platform.",
         "Event at VEX Worlds Championship in Dallas, TX."
@@ -31,6 +30,22 @@
     }
   ],
   "ai": [
+    {
+      "name": "Train of Thought",
+      "year": "2024",
+      "description": ["Built a multi-agent LLM system using chain-of-thought reasoning", "System is capable of recursive subproblem validation, backtracking, prompt decomposition, output critique, and safety checks", "Using Google Gemini, we observed large improvements in accuracy/reasoning"],
+      "images": ["/projects/Cloud/tot1.png", "/projects/Cloud/tot2.png"],
+      "imageDescriptions": ["", ""],
+      "links": [""]
+    },
+    {
+      "name": "TexPilot (HackCMU)",
+      "year": "2023",
+      "description": ["Built a browser extension of Overleaf to help college students write LaTeX", "Includes LaTeX code generation w/ LLaMA 2 & code-formatting with Perl", "Worked in a team of 3 at HackCMU, presented the project to judges", "Valuable experience in extension development and using LLMs"],
+      "images": ["/projects/Cloud/image.png", "/projects/Cloud/texp.png", "/projects/Cloud/texinterface.png"],
+      "imageDescriptions": ["Code Formatting Overview", "Our design principles for TexPilot", "The final product we presented to the judges."],
+      "links": [""]
+    },
     {
       "name": "Plant Disease Detection and Classification",
       "year": "2021",
@@ -68,6 +83,24 @@
     }
   ],
   "software": [
+
+  ],
+  "cloud": [
+    {
+      "name": "Hirezz (Mobile App)",
+      "year": "2021",
+      "description": ["Developed MVP for company I cofounded, Hirezz", "Designed with Figma and developed with Flutter and Firebase", "A social networking app to discover and hire home contractors", "Started beta with 100+ contractors, gained angel investment, exited to angel"],
+      "images": ["/projects/Software/Chat.png", "/projects/Software/Home.png", "/projects/Software/Search.png", "/projects/Software/Logo.png"],
+      "imageDescriptions": ["Some of the code (using Flutter) for the chat screen alongside the app running on an IOS emulator.", "Home screen", "Search screen (we used Algolia search)."]
+    },
+    {
+      "name": "FireFinder",
+      "year": "2021",
+      "description": ["Created a smart fire detection system connected to AWS", "Used Arduino, ESP8266, and sensors to build a prototype", "Worked with AWS IoT, AWS Lambda, and other cloud services", "Presented project at a district tech conference and blogged weekly"],
+      "images": ["/projects/Cloud/FireFinder.png", "/projects/Cloud/App.png", "/projects/Cloud/board.png"],
+      "imageDescriptions": ["", "The app I designed to be able to view fire evacuation routes and manage emergency notifications.", "An early working version of the detector I made with some sensors and wiring I got from school and Amazon. I later made a 3D printed case for it."],
+      "links": ["https://sites.google.com/student.lvusd.org/firefinder/weekly-updates"]
+    },
     {
       "name": "Machina Labs (Toolset)",
       "year": "2022",
@@ -83,24 +116,6 @@
       "images": ["/AllayTax.png", "/projects/Software/AllayHome.png", "/projects/Software/AllayBlog.png", "/projects/Software/About.png", "/projects/Software/Cache.png"],
       "imageDescriptions": ["", "Home page of the website. The focus was on improving user conversion rate, so the contact form was a central part of the page.", "A CMS was implemented so that blog posts about tax issues can easily be written and updated.", "Some info about the company and the services they provide.", "Implemented Cloudflare CDN along with caching to speed up the website performance."],
       "links": ["https://www.allaytax.com", "", "", ""]
-    }
-  ],
-  "cloud": [
-    {
-      "name": "TexPilot @ HackCMU",
-      "year": "2024",
-      "description": ["Built a browser extension of Overleaf to help college students write LaTeX", "Includes LaTeX code generation w/ LLaMA 2 & code-formatting with Perl", "Worked in a team of 3 at HackCMU, presented the project to judges", "Valuable experience in extension development and using LLMs"],
-      "images": ["/projects/Cloud/image.png"],
-      "imageDescriptions": ["Code Formatting Overview"],
-      "links": [""]
-    },
-    {
-      "name": "FireFinder",
-      "year": "2021",
-      "description": ["Created a smart fire detection system connected to AWS", "Used Arduino, ESP8266, and sensors to build a prototype", "Worked with AWS IoT, AWS Lambda, and other cloud services", "Presented project at a district tech conference and blogged weekly"],
-      "images": ["/projects/Cloud/FireFinder.png", "/projects/Cloud/App.png", "/projects/Cloud/board.png"],
-      "imageDescriptions": ["", "The app I designed to be able to view fire evacuation routes and manage emergency notifications.", "An early working version of the detector I made with some sensors and wiring I got from school and Amazon. I later made a 3D printed case for it."],
-      "links": ["https://sites.google.com/student.lvusd.org/firefinder/weekly-updates"]
     }
   ]
 }

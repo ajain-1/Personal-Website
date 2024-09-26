@@ -61,7 +61,7 @@ export default function Honors() {
   return (
     <Box px={[5, 5, 10]} py={5}>
       <Heading fontSize={"2xl"} mb={5}>
-        Honors
+        Honors / Certifications
       </Heading>
       <SimpleGrid columns={[1, 1, 2]} spacing={4}>
         {honors.map(({ title, institution, date, description, imageUrl }) => (
@@ -85,7 +85,7 @@ export default function Honors() {
 export function Card(props: { date: string; title: string; institution: string; description: Array<String> | undefined; imageUrl: string }) {
   const { title, institution, description, imageUrl } = props;
   return (
-    <Box w={"full"} bgColor="gray.900" borderRadius='0px' p={6} h="full">
+    <Box w={"full"} bgColor="gray.50" borderRadius='0px' p={6} h="full" border={"1px"} borderColor={"black"}>
       <Stack spacing={5}>
         <Stack direction={"row"} spacing={4} align={"center"}>
           <Avatar src={imageUrl} />
@@ -93,7 +93,7 @@ export function Card(props: { date: string; title: string; institution: string; 
             <Text fontWeight={600} fontSize="lg">
               {title}
             </Text>
-            <Text color={"gray.100"} fontWeight={600} mt={"5"}>
+            <Text color={"gray.700"} fontWeight={600} mt={"5"}>
               {institution} • {props.date}
             </Text>
           </Stack>

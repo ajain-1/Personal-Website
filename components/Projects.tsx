@@ -7,21 +7,11 @@ import { ChakraNextImage } from "./ChakraImg";
 export default function Projects() {
   return (
   <Box px={[5, 5, 10]} py={5}>
-      <Heading fontSize={"2xl"} mb={5}>
+      <Heading fontSize={"2xl"} mb={7}>
         Projects
       </Heading>
-      <Text fontSize={"lg"} pt={0} mb={4} fontWeight={500} id="robotics">
-        Robotics
-      </Text>
-      <SimpleGrid columns={[1, 1, 2]} spacing={4}>
-        {projects.robotics.map(({ name, year, description, images, imageDescriptions }) => (
-          <Box key={name} h="100%">
-            <Project name={name} year={year} description={description} images={images} idesc={imageDescriptions}></Project>
-          </Box>
-        ))}
-      </SimpleGrid>
-      <Text fontSize={"lg"} pt={5} mb={4} fontWeight={500} id="ai">
-        Artificial Intelligence
+      <Text fontSize={"xl"} mb={4} fontWeight={600} id="ai">
+        Artificial Intelligence / Machine Learning
       </Text>
       <SimpleGrid columns={[1, 1, 2]} spacing={4}>
         {projects.ai.map(({ name, year, description, images, imageDescriptions }) => (
@@ -40,13 +30,23 @@ export default function Projects() {
           </Box>
         ))}
       </SimpleGrid> */}
-      <Text fontSize={"lg"} pt={5} mb={4} fontWeight={500} id="more">
-        More
+      <Text fontSize={"xl"} pt={10} mb={4} fontWeight={600} id="more">
+        Software Development
       </Text>
       <SimpleGrid columns={[1, 1, 2]} spacing={4}>
         {projects.cloud.map(({ name, year, description, images, imageDescriptions, links }) => (
           <Box key={name} h="100%">
             <Project name={name} year={year} description={description} images={images} idesc={imageDescriptions} links={links}></Project>
+          </Box>
+        ))}
+      </SimpleGrid>
+      <Text fontSize={"xl"} pt={10} mb={4} fontWeight={600} id="robotics">
+        Robotics
+      </Text>
+      <SimpleGrid columns={[1, 1, 2]} spacing={4}>
+        {projects.robotics.map(({ name, year, description, images, imageDescriptions }) => (
+          <Box key={name} h="100%">
+            <Project name={name} year={year} description={description} images={images} idesc={imageDescriptions}></Project>
           </Box>
         ))}
       </SimpleGrid>
@@ -85,7 +85,7 @@ function Project(props: { name: string; year: string; description: Array<String>
         </Stack>
         <UnorderedList px={3}>
           {description.map((desc?: any) => (
-            <ListItem key={desc} fontSize={["0.75em", "0.8em", "0.8em"]} textColor="black">
+            <ListItem key={desc} fontSize={"sm"} textColor="black">
               {desc}
             </ListItem>
           ))}
