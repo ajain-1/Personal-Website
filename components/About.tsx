@@ -39,7 +39,7 @@ export default function About() {
         display={{ base: "none", md: "block" }} 
         mr={-7}
       />
-      <Image src="/IMG_20132.png" alt="profile" borderRadius="0px" mx="auto" width={{md: "250px", base: "400px"}} objectFit={"cover"}></Image>
+      <Image src="/IMG_20132.png" display={{ base: "none", md: "block" }}  alt="profile" borderRadius="0px" mx="auto" width={{md: "250px", base: "400px"}} objectFit={"cover"}></Image>
       
       </Flex>
       </Box>
