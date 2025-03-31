@@ -120,7 +120,7 @@ function Project(props: { name: string; year: string; description: Array<String>
           <Box pt={5}>
             {/* <IMG quality={50} src={image.src} alt='project image' width='1000px' height='500px' priority objectFit='contain'></IMG>
              */}
-            <ChakraNextImage src={image.src} alt="project image" width={700} objectFit="scale-down" height={500}></ChakraNextImage>
+            <ChakraNextImage src={image.src} alt="project image" width={700}  height={500}></ChakraNextImage>
             <Text p={5}>{image.desc}</Text>
           </Box>
         </ModalContent>

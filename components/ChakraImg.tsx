@@ -55,7 +55,7 @@ export const ChakraNextImage = (props: ImageProps & BoxProps) => {
                 )}`}
                 src={src}
                 alt={alt}
-                
+                objectFit={"scale-down"}
                 transition="all 0.2s"
                 borderRadius={'10px'}
                 {...rest}
