@@ -34,7 +34,7 @@ export default function About() {
         alt="profile" 
         borderRadius="0px" 
         mx="auto" 
-        width={"200px"} 
+        width={300} 
         objectFit={"cover"} 
         display={{ base: "none", md: "block" }} 
         mr={-7}

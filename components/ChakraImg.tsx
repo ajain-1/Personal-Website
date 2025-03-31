@@ -1,5 +1,5 @@
 import { Box, BoxProps, chakra } from "@chakra-ui/react";
-import NextImage, { ImageProps, ImageLoaderProps } from "next/image";
+import NextImage, { ImageProps, ImageLoaderProps } from "next/legacy/image";
 
 const ChakraNextUnwrappedImage = chakra(NextImage, {
     shouldForwardProp: (prop) =>

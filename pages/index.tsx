@@ -2,7 +2,7 @@ import { Box, Flex, Heading, HStack, Button, Icon, VStack, Text, Spacer, Show, H
 import { IoSchoolOutline, IoGridOutline, IoMenuOutline, IoBasketballOutline, IoList, IoStarOutline, IoBriefcaseOutline, IoPersonOutline, IoMenu } from "react-icons/io5";
 import type { NextPage } from "next";
 import { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../styles/Home.module.css";
 
 import About from "../components/About";
@@ -67,13 +67,12 @@ const Home: NextPage = () => {
       <Head>
         <link rel="icon" href="/icon.png"></link>
       </Head>
-
       <Flex w={"20vw"} flexDir="column" dir="column" maxH="100vh" bgColor={"white"} borderRight={'1px'} p="5" pt={8} color={"black"} display={["none", "none", "inherit"]}>
         {/* <Heading fontSize={'3xl'} ml={4} mb="7" fontWeight={'900'}>Aryan Jain</Heading> */}
         <VStack spacing={3}>
           {links.map(({ link, title, icon }) => (
             // eslint-disable-next-line
-            <Flex
+            (<Flex
               key={link}
               w="full"
               h="50px"
@@ -87,7 +86,7 @@ const Home: NextPage = () => {
               <Text fontSize="lg" fontWeight={"600"}>
                 {title}
               </Text>
-            </Flex>
+            </Flex>)
           ))}
         </VStack>
         
@@ -138,7 +137,6 @@ const Home: NextPage = () => {
           </a>
         </VStack>
       </Flex>
-
       <Flex flex={1} h="100vh" bgColor="F1ECCE" flexDir={"column"} overflowY="scroll" overflowX={"hidden"}>
         <Show below="md">
           <Flex>

@@ -1,7 +1,7 @@
 import { Box, Center, Modal, ModalOverlay, Flex, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Heading, Text, Badge, Stack, Avatar, useColorModeValue, Image, SimpleGrid, ListItem, useDisclosure, List, UnorderedList, HStack, chakra, Spacer } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import projects from "./projects.json";
-import IMG from "next/image";
+import IMG from "next/legacy/image";
 import { ChakraNextImage } from "./ChakraImg";
 
 export default function Projects() {
@@ -102,7 +102,7 @@ function Project(props: { name: string; year: string; description: Array<String>
                   height={70}
                   alt={imageUrl}
                   className="image"
-                  onClick={(e) => {
+                  onClick={(e: React.MouseEvent<Element, MouseEvent>) => {
                     if (links?.[images.indexOf(imageUrl)]) {
                       window.open(links?.[images.indexOf(imageUrl)], "_blank");
                     } else {
