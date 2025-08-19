@@ -8,11 +8,11 @@ export default function Projects() {
   return (
   <Box px={[5, 5, 10]} py={5}>
       <Heading fontSize={"2xl"} mb={7}>
-        Projects
+        Personal Projects
       </Heading>
-      <Text fontSize={"xl"} mb={4} fontWeight={600} id="ai">
+      {/* <Text fontSize={"xl"} mb={4} fontWeight={600} id="ai">
         Artificial Intelligence / Machine Learning
-      </Text>
+      </Text> */}
       <SimpleGrid columns={[1, 1, 2]} spacing={4}>
         {projects.ai.map(({ name, year, description, images, imageDescriptions }) => (
           <Box key={name} h="100%">
@@ -30,20 +30,20 @@ export default function Projects() {
           </Box>
         ))}
       </SimpleGrid> */}
-      <Text fontSize={"xl"} pt={10} mb={4} fontWeight={600} id="more">
+      {/* <Text fontSize={"xl"} pt={10} mb={4} fontWeight={600} id="more">
         Software Development
-      </Text>
-      <SimpleGrid columns={[1, 1, 2]} spacing={4}>
+      </Text> */}
+      <SimpleGrid columns={[1, 1, 2]} spacing={4} mt={4}>
         {projects.cloud.map(({ name, year, description, images, imageDescriptions, links }) => (
           <Box key={name} h="100%">
             <Project name={name} year={year} description={description} images={images} idesc={imageDescriptions} links={links}></Project>
           </Box>
         ))}
       </SimpleGrid>
-      <Text fontSize={"xl"} pt={10} mb={4} fontWeight={600} id="robotics">
+      {/* <Text fontSize={"xl"} pt={10} mb={4} fontWeight={600} id="robotics">
         Robotics
-      </Text>
-      <SimpleGrid columns={[1, 1, 2]} spacing={4}>
+      </Text> */}
+      <SimpleGrid columns={[1, 1, 2]} spacing={4} mt={4}>
         {projects.robotics.map(({ name, year, description, images, imageDescriptions }) => (
           <Box key={name} h="100%">
             <Project name={name} year={year} description={description} images={images} idesc={imageDescriptions}></Project>

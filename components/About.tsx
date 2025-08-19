@@ -13,9 +13,7 @@ export default function About() {
             Student & Software Developer | CS @ CMU
           </Text>{" "}
         </Heading>
-        <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.700"} mt={4} maxW="550px">
-          Passionate about ML and Robotics. Experienced in Software Development. Always building something new.
-        </Text>
+
         <Flex align="center" mt={6}>
           <Icon as={IoMailOutline} boxSize={"1.5em"} color="black"></Icon>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"blue.500"} ml={3}>

@@ -41,17 +41,17 @@ const Home: NextPage = () => {
     // },
 
 
-    {
-      link: "honors",
-      title: "Honors",
-      icon: IoStarOutline,
-    },
+    // {
+    //   link: "honors",
+    //   title: "Honors",
+    //   icon: IoStarOutline,
+    // },
 
-    {
-      link: "hobbies",
-      title: "Hobbies",
-      icon: IoBasketballOutline,
-    },
+    // {
+    //   link: "hobbies",
+    //   title: "Hobbies",
+    //   icon: IoBasketballOutline,
+    // },
   ];
 
   const scrollIntoView = (id: string) => {
@@ -243,13 +243,13 @@ const Home: NextPage = () => {
 
          */}
 
-<Box id="honors" textColor="gray.900">
+{/* <Box id="honors" textColor="gray.900">
           <Honors></Honors>
-        </Box>
+        </Box> */}
 
-        <Box id="hobbies" textColor="gray.900">
+        {/* <Box id="hobbies" textColor="gray.900">
           <Hobbies></Hobbies>
-        </Box>
+        </Box> */}
       </Flex>
     </Flex>
   );
