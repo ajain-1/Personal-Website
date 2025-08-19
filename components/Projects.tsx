@@ -8,7 +8,7 @@ export default function Projects() {
   return (
   <Box px={[5, 5, 10]} py={5}>
       <Heading fontSize={"2xl"} mb={7}>
-        Personal Projects
+        Projects
       </Heading>
       {/* <Text fontSize={"xl"} mb={4} fontWeight={600} id="ai">
         Artificial Intelligence / Machine Learning
