@@ -5,6 +5,16 @@
   --bg: #fffdf9;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -469,4 +479,9 @@ footer {
   cursor: pointer;
   padding: 0 0 0 12px;
   text-decoration: underline;
+}
+
+/* Keep the heading clear of the viewport edge when jumped to. */
+#photos {
+  scroll-margin-top: 32px;
 }

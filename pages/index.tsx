@@ -21,6 +21,19 @@ const sections: { title: string; items: Project[] }[] = [
 const robots = projects.robots;
 const intro = introJson.intro;
 
+/** Renders [text](href) links inside an otherwise plain intro paragraph. */
+function withLinks(text: string) {
+  return text.split(/(\[[^\]]+\]\([^)]+\))/g).map((chunk, i) => {
+    const m = chunk.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!m) return chunk;
+    return (
+      <a key={i} href={m[2]}>
+        {m[1]}
+      </a>
+    );
+  });
+}
+
 const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
   const [lightbox, setLightbox] = useState<{ src: string; caption: string } | null>(null);
   const [open, setOpen] = useState<string | null>(null);
@@ -56,7 +69,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
 
       <div className="intro">
         {intro.map((p) => (
-          <p key={p}>{p}</p>
+          <p key={p}>{withLinks(p)}</p>
         ))}
       </div>
 
@@ -122,7 +135,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
       </section>
 
       {posts.length > 0 ? (
-        <section>
+        <section id="photos">
           <h2>Photo Blog</h2>
           {posts.map((post) => (
             <div className="post" key={post.id}>
