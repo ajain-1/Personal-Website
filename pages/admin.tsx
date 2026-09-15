@@ -11,7 +11,8 @@ export default function Admin() {
   const [error, setError] = useState("");
 
   const [title, setTitle] = useState("");
-  const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
+  // Defaults to the month you upload in; change it only if the photos are older.
+  const [date, setDate] = useState(() => new Date().toISOString().slice(0, 7));
   const [files, setFiles] = useState<File[]>([]);
   const [stages, setStages] = useState<Stage[]>([]);
   const [busy, setBusy] = useState(false);
@@ -85,6 +86,7 @@ export default function Admin() {
       if (!res.ok) throw new Error((await res.json()).error || "publish failed");
 
       setTitle("");
+      setDate(new Date().toISOString().slice(0, 7));
       setFiles([]);
       setStages([]);
       await loadPosts();
@@ -136,7 +138,7 @@ export default function Admin() {
       <h1 className="admin-h1">New post</h1>
       <form onSubmit={publish} className="admin-form">
         <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Madison, WI" />
-        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+        <input type="month" value={date} onChange={(e) => setDate(e.target.value)} />
 
         <label className="picker">
           {files.length ? `${files.length} photo${files.length > 1 ? "s" : ""} selected` : "Choose photos"}

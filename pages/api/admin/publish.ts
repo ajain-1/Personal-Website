@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { isAuthed } from "../../../lib/auth";
-import { getPosts, savePosts, type Post } from "../../../lib/posts";
+import { savePost, type Post } from "../../../lib/posts";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthed(req)) return res.status(401).json({ error: "not signed in" });
@@ -18,7 +18,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const post: Post = {
       id: `${Date.now().toString(36)}`,
       title: title.trim(),
-      date: typeof date === "string" && date ? date : new Date().toISOString().slice(0, 10),
+      // Month precision only; falls back to the month of upload.
+      date: /^\d{4}-\d{2}/.test(String(date)) ? String(date).slice(0, 7) : new Date().toISOString().slice(0, 7),
       photos: photos.map((p: any) => ({
         src: String(p.src),
         caption: typeof p.caption === "string" ? p.caption : "",
@@ -27,8 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       })),
     };
 
-    const posts = await getPosts();
-    await savePosts([post, ...posts]);
+    await savePost(post);
     return res.json({ ok: true, post });
   } catch (err: any) {
     console.error("[publish]", err);

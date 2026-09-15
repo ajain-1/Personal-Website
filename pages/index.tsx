@@ -130,7 +130,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
                 <span className="post-title">{post.title}</span>
                 {post.date ? (
                   <span className="year">
-                    {new Date(post.date).toLocaleDateString("en-US", {
+                    {new Date(`${post.date.slice(0, 7)}-01T00:00:00Z`).toLocaleDateString("en-US", {
                       month: "long",
                       year: "numeric",
                       timeZone: "UTC",
