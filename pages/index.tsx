@@ -7,26 +7,16 @@ import projects from "../components/projects.json";
 type Project = {
   name: string;
   year: string;
+  url?: string;
   description: string[];
-  images: string[];
-  imageDescriptions: string[];
-  links?: string[];
 };
 
 const sections: { title: string; items: Project[] }[] = [
-  { title: "Machine Learning", items: projects.ai as Project[] },
-  { title: "Software", items: projects.cloud as Project[] },
-  { title: "Robotics", items: projects.robotics as Project[] },
+  { title: "Machine Learning", items: projects.machineLearning },
+  { title: "Systems", items: projects.systems },
 ];
 
-const honors = [
-  { title: "Lockheed Martin Scholar", meta: "Lockheed Martin · 2023" },
-  { title: "Southern California Edison Scholar", meta: "Edison International · 2023" },
-  { title: "VEX World Championship, Science Division (2×)", meta: "VEX Robotics · 2022, 2023" },
-  { title: "VEX State Championship (3×)", meta: "VEX Robotics · 2019, 2022, 2023" },
-  { title: "AWS Certified Solutions Architect", meta: "Amazon Web Services · 2022" },
-  { title: "STEAM Award", meta: "Calabasas High School · 2020" },
-];
+const robots = projects.robots;
 
 const Home: NextPage = () => {
   const [lightbox, setLightbox] = useState<{ src: string; caption: string } | null>(null);
@@ -62,19 +52,26 @@ const Home: NextPage = () => {
 
       <div className="intro">
         <p>
-          I study computer science at Carnegie Mellon. I care most about machine learning and robotics,
-          and I spend most of my time building software.
+          I study computer science at Carnegie Mellon. 
         </p>
-        <p>A few things I&apos;ve made, most recent first.</p>
       </div>
 
+      <div className="columns">
       {sections.map(({ title, items }) => (
         <section key={title}>
           <h2>{title}</h2>
           {items.map((p) => (
             <article className="item" key={p.name}>
               <div className="item-head">
-                <span className="name">{p.name}</span>
+                <span className="name">
+                  {p.url ? (
+                    <a href={p.url} target="_blank" rel="noreferrer">
+                      {p.name}
+                    </a>
+                  ) : (
+                    p.name
+                  )}
+                </span>
                 {p.year ? <span className="year">{p.year}</span> : null}
               </div>
               <ul>
@@ -82,41 +79,32 @@ const Home: NextPage = () => {
                   <li key={d}>{d}</li>
                 ))}
               </ul>
-              {p.images.length > 0 ? (
-                <div className="thumbs">
-                  {p.images.map((src, i) => {
-                    const link = p.links?.[i];
-                    return (
-                      <button
-                        key={src}
-                        onClick={() => {
-                          if (link) window.open(link, "_blank");
-                          else setLightbox({ src, caption: p.imageDescriptions[i] || p.name });
-                        }}
-                        aria-label={link ? `Open link for ${p.name}` : `View image from ${p.name}`}>
-                        <Image src={src} alt={p.name} width={86} height={66} style={{ objectFit: "cover" }} />
-                      </button>
-                    );
-                  })}
-                </div>
-              ) : null}
             </article>
           ))}
         </section>
       ))}
+      </div>
 
       <section>
-        <h2>Honors</h2>
-        {honors.map((h) => (
-          <div className="honor" key={h.title}>
-            <span>{h.title}</span>
-            <span className="meta">{h.meta}</span>
-          </div>
-        ))}
+        <h2>Robots</h2>
+        <p className="blurb">
+          Some of the cool robots I&apos;ve worked on over the years. These were as part of our high school VEX Robotics team.
+        </p>
+        <div className="gallery">
+          {robots.map(({ src, caption }) => (
+            <button
+              key={src}
+              className="tile"
+              onClick={() => setLightbox({ src, caption })}
+              aria-label="View robot photo">
+              <Image src={src} alt={caption} fill sizes="(max-width: 600px) 50vw, 220px" style={{ objectFit: "cover" }} />
+            </button>
+          ))}
+        </div>
       </section>
 
       <footer>
-        <a href="/resume.pdf">Résumé</a> · Los Angeles, CA
+        San Francisco, CA
       </footer>
 
       {lightbox ? (
