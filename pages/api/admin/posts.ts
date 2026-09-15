@@ -12,6 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const id = String(req.query.id || "");
     if (!/^[a-z0-9]+$/i.test(id)) return res.status(400).json({ error: "bad id" });
     if (!(await deletePost(id))) return res.status(404).json({ error: "no such post" });
+    await res.revalidate("/").catch((e) => console.error("[posts] revalidate", e));
     return res.json({ ok: true });
   }
 
