@@ -138,7 +138,6 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
                   </span>
                 ) : null}
               </div>
-              {post.note ? <p className="blurb">{post.note}</p> : null}
               <div className="gallery">
                 {post.photos.map((photo) => (
                   <button

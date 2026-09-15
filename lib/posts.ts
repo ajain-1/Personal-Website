@@ -1,7 +1,7 @@
 import { put, list } from "@vercel/blob";
 
 export type Photo = { src: string; caption?: string; width?: number; height?: number };
-export type Post = { id: string; title: string; date: string; note: string; photos: Photo[] };
+export type Post = { id: string; title: string; date: string; photos: Photo[] };
 
 const INDEX = "posts/index.json";
 

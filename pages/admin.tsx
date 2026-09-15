@@ -12,7 +12,6 @@ export default function Admin() {
 
   const [title, setTitle] = useState("");
   const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
-  const [note, setNote] = useState("");
   const [files, setFiles] = useState<File[]>([]);
   const [stages, setStages] = useState<Stage[]>([]);
   const [busy, setBusy] = useState(false);
@@ -81,12 +80,11 @@ export default function Admin() {
       const res = await fetch("/api/admin/publish", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title, date, note, photos }),
+        body: JSON.stringify({ title, date, photos }),
       });
       if (!res.ok) throw new Error((await res.json()).error || "publish failed");
 
       setTitle("");
-      setNote("");
       setFiles([]);
       setStages([]);
       await loadPosts();
@@ -139,7 +137,6 @@ export default function Admin() {
       <form onSubmit={publish} className="admin-form">
         <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Madison, WI" />
         <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
-        <textarea value={note} onChange={(e) => setNote(e.target.value)} placeholder="A short note (optional)" rows={2} />
 
         <label className="picker">
           {files.length ? `${files.length} photo${files.length > 1 ? "s" : ""} selected` : "Choose photos"}

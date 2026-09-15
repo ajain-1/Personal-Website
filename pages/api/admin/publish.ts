@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!isAuthed(req)) return res.status(401).json({ error: "not signed in" });
   if (req.method !== "POST") return res.status(405).end();
 
-  const { title, date, note, photos } = req.body || {};
+  const { title, date, photos } = req.body || {};
   if (typeof title !== "string" || !title.trim()) return res.status(400).json({ error: "title required" });
   if (!Array.isArray(photos) || photos.length === 0) return res.status(400).json({ error: "no photos" });
   // A photo that failed processing has no usable src; refuse rather than
@@ -19,7 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       id: `${Date.now().toString(36)}`,
       title: title.trim(),
       date: typeof date === "string" && date ? date : new Date().toISOString().slice(0, 10),
-      note: typeof note === "string" ? note.trim() : "",
       photos: photos.map((p: any) => ({
         src: String(p.src),
         caption: typeof p.caption === "string" ? p.caption : "",
