@@ -123,7 +123,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
 
       {posts.length > 0 ? (
         <section>
-          <h2>Photos</h2>
+          <h2>Photo Blog</h2>
           {posts.map((post) => (
             <div className="post" key={post.id}>
               <div className="post-head">
