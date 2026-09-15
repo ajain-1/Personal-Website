@@ -352,3 +352,24 @@ footer {
   display: block;
   height: 16px;
 }
+
+/* --- photo posts --- */
+.post {
+  margin-bottom: 40px;
+}
+
+.post-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.post-title {
+  font-size: 18px;
+}
+
+.post .blurb {
+  margin-bottom: 14px;
+  max-width: 640px;
+}
