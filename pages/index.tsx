@@ -3,7 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import projects from "../components/projects.json";
-import { intro } from "../components/intro.json";
+import introJson from "../components/intro.json";
+import { getPosts, type Post } from "../lib/posts";
 
 type Project = {
   name: string;
@@ -18,8 +19,9 @@ const sections: { title: string; items: Project[] }[] = [
 ];
 
 const robots = projects.robots;
+const intro = introJson.intro;
 
-const Home: NextPage = () => {
+const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
   const [lightbox, setLightbox] = useState<{ src: string; caption: string } | null>(null);
   const [open, setOpen] = useState<string | null>(null);
 
@@ -119,6 +121,47 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      {posts.length > 0 ? (
+        <section>
+          <h2>Photos</h2>
+          {posts.map((post) => (
+            <div className="post" key={post.id}>
+              <div className="post-head">
+                <span className="post-title">{post.title}</span>
+                {post.date ? (
+                  <span className="year">
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      month: "long",
+                      year: "numeric",
+                      timeZone: "UTC",
+                    })}
+                  </span>
+                ) : null}
+              </div>
+              {post.note ? <p className="blurb">{post.note}</p> : null}
+              <div className="gallery">
+                {post.photos.map((photo) => (
+                  <button
+                    key={photo.src}
+                    className="tile"
+                    onClick={() => setLightbox({ src: photo.src, caption: photo.caption || post.title })}
+                    aria-label={photo.caption || `Photo from ${post.title}`}>
+                    <Image
+                      src={photo.src}
+                      alt={photo.caption || post.title}
+                      fill
+                      sizes="(max-width: 600px) 50vw, 240px"
+                      style={{ objectFit: "cover" }}
+                      unoptimized={false}
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      ) : null}
+
       <footer>
         San Francisco, CA
       </footer>
@@ -140,5 +183,9 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  return { props: { posts: await getPosts() }, revalidate: 600 };
+}
 
 export default Home;
