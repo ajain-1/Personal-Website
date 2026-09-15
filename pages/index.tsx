@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import projects from "../components/projects.json";
 import introJson from "../components/intro.json";
-import { getPosts, type Post } from "../lib/photos";
+import { getPosts, type Post } from "../lib/posts";
 
 type Project = {
   name: string;
@@ -152,6 +152,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
                       fill
                       sizes="(max-width: 600px) 50vw, 240px"
                       style={{ objectFit: "cover" }}
+                      unoptimized={false}
                     />
                   </button>
                 ))}

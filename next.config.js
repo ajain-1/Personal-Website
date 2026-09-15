@@ -2,13 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "prod-files-secure.s3.us-west-2.amazonaws.com" },
-      { protocol: "https", hostname: "s3.us-west-2.amazonaws.com" },
-      { protocol: "https", hostname: "*.notion-static.com" },
-      { protocol: "https", hostname: "*.amazonaws.com" },
-    ],
-    // Notion's signed URLs expire hourly; keep optimized copies longer.
+    remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
     minimumCacheTTL: 2592000,
   },
 };

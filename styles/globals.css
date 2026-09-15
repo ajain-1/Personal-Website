@@ -373,3 +373,100 @@ footer {
   margin-bottom: 14px;
   max-width: 640px;
 }
+
+/* --- admin --- */
+.admin {
+  max-width: 560px;
+}
+
+.admin-h1 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.admin h2 {
+  margin-top: 44px;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form button,
+.picker {
+  font: inherit;
+  font-size: 16px;
+  padding: 11px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  background: #fff;
+  color: var(--ink);
+  width: 100%;
+}
+
+.admin-form textarea {
+  resize: vertical;
+}
+
+.picker {
+  cursor: pointer;
+  color: var(--muted);
+  text-align: center;
+}
+
+.picker input {
+  display: none;
+}
+
+.admin-form button {
+  cursor: pointer;
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.admin-form button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.admin-error {
+  color: #a3341f;
+  font-size: 15px;
+}
+
+.stages {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  font-size: 14px;
+}
+
+.stages li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.stages .meta,
+.admin .meta {
+  color: var(--muted);
+}
+
+.del {
+  background: none;
+  border: 0;
+  font: inherit;
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0 0 0 12px;
+  text-decoration: underline;
+}
