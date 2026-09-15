@@ -1,26 +1,194 @@
+:root {
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --rule: #e4e1da;
+  --bg: #fffdf9;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 0.5px;
+}
+
+a:hover {
+  color: var(--muted);
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 84px 24px 120px;
+}
+
+header h1 {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  margin: 0 0 8px;
+}
+
+header .links {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+header .links span {
+  margin: 0 8px;
+  opacity: 0.5;
+}
+
+.intro {
+  margin-top: 28px;
+}
+
+.intro p {
+  margin: 0 0 14px;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  margin: 64px 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.item {
+  margin-bottom: 34px;
+}
+
+.item-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.item-head .name {
+  font-size: 18px;
+}
+
+.item-head .year {
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: oldstyle-nums;
+}
+
+.item ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #3a3a3a;
+  font-size: 16px;
+}
+
+.item ul li {
+  margin-bottom: 3px;
+}
+
+.thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.thumbs button {
+  padding: 0;
+  border: 1px solid var(--rule);
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  transition: opacity 0.15s ease;
+}
+
+.thumbs button:hover {
+  opacity: 0.7;
+}
+
+.thumbs img {
+  width: 86px;
+  height: 66px;
+  object-fit: cover;
+  display: block;
+}
+
+.honor {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 16px;
+}
+
+.honor .meta {
+  color: var(--muted);
+  font-size: 14px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+footer {
+  margin-top: 72px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  z-index: 50;
+  cursor: zoom-out;
+}
+
+.lightbox figure {
+  margin: 0;
+  max-width: 900px;
+  background: var(--bg);
+  padding: 14px;
+}
+
+.lightbox figure > span, .lightbox img {
+  max-width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox figcaption {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .wrap { padding: 56px 20px 80px; }
+  .honor { flex-direction: column; gap: 2px; }
+  .honor .meta { text-align: left; }
 }
