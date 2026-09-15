@@ -57,7 +57,9 @@ header .links span {
 
 .intro {
   margin-top: 28px;
-  max-width: 620px;
+  max-width: 640px;
+  text-wrap: pretty;
+  hyphens: auto;
 }
 
 .intro p {
@@ -243,4 +245,110 @@ footer {
   .columns > section > h2 {
     margin-top: 48px;
   }
+}
+
+/* --- expandable project list --- */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  border-bottom: 1px solid var(--rule);
+}
+
+.row-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 0;
+  background: none;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.row-head:hover .name {
+  color: var(--muted);
+}
+
+.row-head .name {
+  flex: 1;
+  font-size: 17px;
+  transition: color 0.12s ease;
+}
+
+.row-head .year {
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: oldstyle-nums;
+}
+
+.row-head::after {
+  content: "+";
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1;
+}
+
+.row.open .row-head::after {
+  content: "\2013";
+}
+
+.row.open .name {
+  font-style: italic;
+}
+
+.detail-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.row.open .detail-wrap {
+  grid-template-rows: 1fr;
+}
+
+.detail {
+  overflow: hidden;
+  min-height: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.row.open .detail {
+  opacity: 1;
+  transition: opacity 0.26s ease 0.06s;
+}
+
+.detail > * {
+  margin-bottom: 0;
+}
+
+.detail ul {
+  margin: 0;
+  padding: 0 0 0 17px;
+  font-size: 15.5px;
+  color: #3a3a3a;
+}
+
+.detail ul li {
+  margin-bottom: 5px;
+}
+
+.detail .visit {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.detail::after {
+  content: "";
+  display: block;
+  height: 16px;
 }

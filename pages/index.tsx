@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import projects from "../components/projects.json";
+import { intro } from "../components/intro.json";
 
 type Project = {
   name: string;
@@ -20,6 +21,7 @@ const robots = projects.robots;
 
 const Home: NextPage = () => {
   const [lightbox, setLightbox] = useState<{ src: string; caption: string } | null>(null);
+  const [open, setOpen] = useState<string | null>(null);
 
   useEffect(() => {
     if (!lightbox) return;
@@ -51,36 +53,50 @@ const Home: NextPage = () => {
       </header>
 
       <div className="intro">
-        <p>
-          I study computer science at Carnegie Mellon. 
-        </p>
+        {intro.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
       </div>
 
       <div className="columns">
       {sections.map(({ title, items }) => (
         <section key={title}>
           <h2>{title}</h2>
-          {items.map((p) => (
-            <article className="item" key={p.name}>
-              <div className="item-head">
-                <span className="name">
-                  {p.url ? (
-                    <a href={p.url} target="_blank" rel="noreferrer">
-                      {p.name}
-                    </a>
-                  ) : (
-                    p.name
-                  )}
-                </span>
-                {p.year ? <span className="year">{p.year}</span> : null}
-              </div>
-              <ul>
-                {p.description.map((d) => (
-                  <li key={d}>{d}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
+          <ul className="list">
+            {items.map((p) => {
+              const isOpen = open === p.name;
+              return (
+                <li key={p.name} className={isOpen ? "row open" : "row"}>
+                  <button
+                    className="row-head"
+                    aria-expanded={isOpen}
+                    onClick={() => setOpen(isOpen ? null : p.name)}>
+                    <span className="name">{p.name}</span>
+                    <span className="year">{p.year}</span>
+                  </button>
+                  <div className="detail-wrap" aria-hidden={!isOpen}>
+                    <div className="detail">
+                      <ul>
+                        {p.description.map((d) => (
+                          <li key={d}>{d}</li>
+                        ))}
+                      </ul>
+                      {p.url ? (
+                        <a
+                          className="visit"
+                          href={p.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          tabIndex={isOpen ? 0 : -1}>
+                          View project &rarr;
+                        </a>
+                      ) : null}
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
         </section>
       ))}
       </div>
