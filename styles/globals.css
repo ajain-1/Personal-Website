@@ -56,6 +56,10 @@ header h1 {
 }
 
 header .links {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
   font-size: 15px;
   color: var(--muted);
 }
@@ -63,6 +67,16 @@ header .links {
 header .links span {
   margin: 0 8px;
   opacity: 0.5;
+}
+
+/* Page links sit right of the contact links on desktop, and drop to their
+   own row on narrow screens rather than squeezing onto one line. */
+@media (max-width: 640px) {
+  header .links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
 }
 
 .intro {
@@ -538,4 +552,20 @@ footer {
   content: "·";
   margin: 0 9px;
   color: var(--rule);
+}
+
+/* On /photos the button trails a .post (40px margin); give it the same
+   clearance when it trails a gallery directly, as on /robots. */
+.gallery + .more {
+  margin-top: 50px;
+}
+
+/* The name links home, but shouldn't look like a link. */
+header h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header h1 a:hover {
+  color: var(--muted);
 }
