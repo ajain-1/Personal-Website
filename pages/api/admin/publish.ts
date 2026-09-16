@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await savePost(post);
     // Refresh the home page now rather than waiting out the ISR window.
-    await res.revalidate("/").catch((e) => console.error("[publish] revalidate", e));
+    await Promise.all([res.revalidate("/"), res.revalidate("/photos")]).catch((e) => console.error("[publish] revalidate", e));
     return res.json({ ok: true, post });
   } catch (err: any) {
     console.error("[publish]", err);

@@ -1,10 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useState } from "react";
 import projects from "../components/projects.json";
 import introJson from "../components/intro.json";
+import experienceJson from "../components/experience.json";
 import { getPosts, type Post } from "../lib/posts";
+import SiteHeader from "../components/SiteHeader";
+import PhotoPosts from "../components/PhotoPosts";
+import Lightbox, { type LightboxPhoto } from "../components/Lightbox";
+
+const HOME_POSTS = 2;
 
 type Project = {
   name: string;
@@ -20,6 +27,7 @@ const sections: { title: string; items: Project[] }[] = [
 
 const robots = projects.robots;
 const intro = introJson.intro;
+const experience = experienceJson.experience;
 
 /** Renders [text](href) links inside an otherwise plain intro paragraph. */
 function withLinks(text: string) {
@@ -35,17 +43,8 @@ function withLinks(text: string) {
 }
 
 const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
-  const [lightbox, setLightbox] = useState<{ src: string; caption: string } | null>(null);
+  const [lightbox, setLightbox] = useState<LightboxPhoto | null>(null);
   const [open, setOpen] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (!lightbox) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightbox(null);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [lightbox]);
 
   return (
     <div className="wrap">
@@ -56,22 +55,32 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
         <link rel="icon" href="/icon.png" />
       </Head>
 
-      <header>
-        <h1>Aryan Jain</h1>
-        <div className="links">
-          <a href="mailto:aryanj@andrew.cmu.edu">aryanj@andrew.cmu.edu</a>
-          <span>/</span>
-          <a href="https://www.linkedin.com/in/aryanjain1/">LinkedIn</a>
-          <span>/</span>
-          <a href="https://www.github.com/ajain-1">GitHub</a>
-        </div>
-      </header>
+      <SiteHeader />
 
       <div className="intro">
         {intro.map((p) => (
           <p key={p}>{withLinks(p)}</p>
         ))}
       </div>
+
+      {/* Experience section — hidden for now; data still lives in experience.json
+      <section>
+        <h2>Experience</h2>
+        <ul className="list">
+          {experience.map((job) => (
+            <li className="row" key={`${job.place}-${job.when}`}>
+              <div className="row-head static">
+                <span className="name">
+                  {job.place}
+                  <span className="role">{job.title}</span>
+                </span>
+                <span className="year">{job.when}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+      */}
 
       <div className="columns">
       {sections.map(({ title, items }) => (
@@ -116,6 +125,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
       ))}
       </div>
 
+      {/* Robots section — hidden for now; data still lives in projects.json
       <section>
         <h2>Robots</h2>
         <p className="blurb">
@@ -133,44 +143,17 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
           ))}
         </div>
       </section>
+      */}
 
       {posts.length > 0 ? (
         <section id="photos">
           <h2>Photo Blog</h2>
-          {posts.map((post) => (
-            <div className="post" key={post.id}>
-              <div className="post-head">
-                <span className="post-title">{post.title}</span>
-                {post.date ? (
-                  <span className="year">
-                    {new Date(`${post.date.slice(0, 7)}-01T00:00:00Z`).toLocaleDateString("en-US", {
-                      month: "long",
-                      year: "numeric",
-                      timeZone: "UTC",
-                    })}
-                  </span>
-                ) : null}
-              </div>
-              <div className="gallery">
-                {post.photos.map((photo) => (
-                  <button
-                    key={photo.src}
-                    className="tile"
-                    onClick={() => setLightbox({ src: photo.src, caption: photo.caption || post.title })}
-                    aria-label={photo.caption || `Photo from ${post.title}`}>
-                    <Image
-                      src={photo.src}
-                      alt={photo.caption || post.title}
-                      fill
-                      sizes="(max-width: 600px) 50vw, 240px"
-                      style={{ objectFit: "cover" }}
-                      unoptimized={false}
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
-          ))}
+          <PhotoPosts posts={posts.slice(0, HOME_POSTS)} onOpen={setLightbox} />
+          {posts.length > HOME_POSTS ? (
+            <Link className="more" href="/photos">
+              See all {posts.length} posts &rarr;
+            </Link>
+          ) : null}
         </section>
       ) : null}
 
@@ -178,20 +161,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => {
         San Francisco, CA
       </footer>
 
-      {lightbox ? (
-        <div className="lightbox" onClick={() => setLightbox(null)}>
-          <figure onClick={(e) => e.stopPropagation()}>
-            <Image
-              src={lightbox.src}
-              alt={lightbox.caption}
-              width={1000}
-              height={750}
-              style={{ width: "100%", height: "auto", maxHeight: "72vh", objectFit: "contain" }}
-            />
-            <figcaption>{lightbox.caption}</figcaption>
-          </figure>
-        </div>
-      ) : null}
+      <Lightbox photo={lightbox} onClose={() => setLightbox(null)} />
     </div>
   );
 };

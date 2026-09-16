@@ -1,0 +1,34 @@
+{
+  "experience": [
+    {
+      "place": "Notion",
+      "title": "Software Engineer Intern",
+      "when": "2026"
+    },
+    {
+      "place": "Tesla",
+      "title": "Autopilot Software Engineer Intern",
+      "when": "2026"
+    },
+    {
+      "place": "Amazon Web Services",
+      "title": "Software Engineer Intern, AI/ML",
+      "when": "2025"
+    },
+    {
+      "place": "Hadrian",
+      "title": "Software Engineer Intern, AI/ML",
+      "when": "2024"
+    },
+    {
+      "place": "Compos Mentis",
+      "title": "Founding Engineer",
+      "when": "2023 – 2024"
+    },
+    {
+      "place": "Machina Labs",
+      "title": "Software Development Intern",
+      "when": "2022"
+    }
+  ]
+}

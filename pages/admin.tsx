@@ -5,6 +5,9 @@ import type { Post } from "../lib/posts";
 
 type Stage = { name: string; state: "waiting" | "uploading" | "processing" | "done" | "error" };
 
+/** Photos in flight at once. Higher stalls slow uplinks; lower is just slower. */
+const CONCURRENCY = 3;
+
 export default function Admin() {
   const [authed, setAuthed] = useState(false);
   const [password, setPassword] = useState("");
@@ -52,8 +55,12 @@ export default function Admin() {
     setStages(files.map((f) => ({ name: f.name, state: "waiting" })));
 
     try {
-      const photos = [];
-      for (let i = 0; i < files.length; i++) {
+      // Upload and convert a few at a time. Fully parallel would hammer a
+      // phone's uplink and run several HEIC decodes at once; sequential was
+      // needlessly slow for a six-photo post.
+      const photos: any[] = new Array(files.length);
+
+      const handleOne = async (i: number) => {
         const file = files[i];
         const mark = (state: Stage["state"]) =>
           setStages((s) => s.map((x, j) => (j === i ? { ...x, state } : x)));
@@ -74,9 +81,16 @@ export default function Admin() {
           mark("error");
           throw new Error((await res.json()).error || `failed on ${file.name}`);
         }
-        photos.push(await res.json());
+        // Keep the slot so photos stay in the order they were picked.
+        photos[i] = await res.json();
         mark("done");
-      }
+      };
+
+      let next = 0;
+      const worker = async () => {
+        while (next < files.length) await handleOne(next++);
+      };
+      await Promise.all(Array.from({ length: Math.min(CONCURRENCY, files.length) }, worker));
 
       const res = await fetch("/api/admin/publish", {
         method: "POST",
